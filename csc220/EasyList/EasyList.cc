@@ -18,6 +18,52 @@ class List
 		int end;		// the index of the last valid item in the list
 		int curr;		// the index of the current item in the list
 		int list[MAX_SIZE];	// the list
+		int placeholder[MAX_SIZE];
+
+		//Shifts list to the right by one starting at the cursor
+		void SRO() {
+			if (curr == -1) {
+				curr = 0;
+				end = 0;
+			} else {
+				int tmp[MAX_SIZE];
+				for (int i = 0; i < MAX_SIZE; i++) {
+					if (i < curr) {
+						tmp[i] = list[i];
+					} else if(i == curr) {
+						;
+					} else if(i > curr) {
+						tmp[i+1] == list[i];
+					}
+				}
+				for (int i = 0; i < MAX_SIZE; i++) {
+					list[i] = tmp[i];
+				}
+			}
+			end++;
+		}
+
+		//I dont think this is being used anywhere but removing it caused a segmentation fault so it stays
+		void SROP() {
+			if (curr == -1) {
+				curr = 0;
+				end = 0;
+			}
+				int tmp[MAX_SIZE];
+				for (int i = 0; i < MAX_SIZE; i++) {
+					if (i < curr) {
+						tmp[i] = placeholder[i];
+					} else if(i == curr) {
+						;
+					} else if(i > curr) {
+						tmp[i+1] == placeholder[i];
+					}
+				}
+				for (int i = 0; i < MAX_SIZE; i++) {
+					placeholder[i] = tmp[i];
+				}
+			end++;
+		}
 
 	public:
 		// constructor
@@ -32,18 +78,24 @@ class List
 		// clones the list l and sets the last element as the current
 		List(const List& l)
 		{
-			//Need to clone the list
-
-			//Set last element to current
+			end = -1;
+			curr = -1;
+			for(int i = 0; i <= l.end; i++) {
+				InsertAfter(l.list[i]);
+			}
+			curr = end;
 		}
 
 		// copy constructor
 		// clones the list l and sets the last element as the current
 		void operator=(const List& l)
 		{
-			//Need to clone the list
-
-			//Set last element to current
+			end = -1;
+			curr = -1;
+			for(int i = 0; i <= l.end; i++) {
+				InsertAfter(l.list[i]);
+			}
+			curr = end;
 		}
 
 		// navigates to the beginning of the list
@@ -65,7 +117,7 @@ class List
 		// this should not be possible for invalid positions
 		void SetPos(int pos)
 		{
-			if (pos >= 0 && pos <= MAX_SIZE)	{
+			if (pos >= 0 && pos <= MAX_SIZE && pos <= end)	{
 				curr = pos;
 			}
 		}
@@ -75,7 +127,9 @@ class List
 		// there should be no wrap-around
 		void Prev()
 		{
-			curr--;
+			if (curr != 0) {
+				curr--;
+			}
 		}
 
 		// navigates to the next element
@@ -83,7 +137,9 @@ class List
 		// there should be no wrap-around
 		void Next()
 		{
-			curr++;
+			if (curr != end) {
+				curr++;
+			}
 		}
 
 		// returns the location of the current element (or -1)
@@ -95,7 +151,11 @@ class List
 		// returns the value of the current element (or -1)
 		int GetValue() const
 		{
-			return list[curr];
+			if((end + 1) != MAX_SIZE) {
+				return list[curr];
+			}	else {
+				return -1;
+			}
 		}
 
 		// returns the size of the list
@@ -110,23 +170,27 @@ class List
 		// this should not be possible for a full list
 		void InsertBefore(int data)
 		{
-			if(end != MAX_SIZE) {
-				if (curr <= 0) {
+			if((end + 1) != MAX_SIZE) {
+				if(end == -1) {
 					curr = 0;
-					int tmp[end + 1];
-					tmp[0] = data;
-					for (int i = 1; i <= end +1; i++) {
-						tmp[i] = list[i - 1];
-					}
-
-					for (int i = 0; i <= end; i++) {
-						list[i] = tmp[i];
-					}
-					end++;
-				} else {
-					curr--;
-					InsertAfter(data);
 				}
+				int tmp[MAX_SIZE];
+				end++;
+				for ( int i = 0; i <= end; ++i) {
+					if ( i < curr) {
+						tmp[i] = list[i];
+					}
+					if (i==curr) {
+						tmp[i] = data;
+					}
+					if ( i > curr) {
+						tmp[i] = list[i-1];
+					}
+				}
+				for (int i = 0; i < MAX_SIZE; i++) {
+					list[i] = tmp[i];
+				}
+
 			}
 		}
 
@@ -135,31 +199,10 @@ class List
 		// this should not be possible for a full list
 		void InsertAfter(int data)
 		{
-			if(end != MAX_SIZE) {
-				if (curr < 0) {
-					curr = 0;
-					end++;
-				} else {
-					curr++;
-					end++;
-				}
-
-				int tmp[end + 1];
-				int i = 0;
-				while (i <= end) {
-					if(i < curr) {
-						tmp[i] = list[i];
-					} else if (i == curr) {
-						tmp[i] = data;
-					} else if (i > curr) {
-						tmp[i] = list[i+1];
-					}
-					i++;
-				}
-
-				for (int k = 0; k <= end; k++) {
-					list[k] = tmp[k];
-				}
+			if((end + 1) != MAX_SIZE) {
+				curr++;
+				SRO();
+				list[curr] = data;
 			}
 		}
 
@@ -167,43 +210,43 @@ class List
 		// this should not be possible for an empty list
 		void Remove()
 		{
-			//if list is not empty.
-			//split list into three lists.
-			//first list contains all of the alements before element to be removed.
-			//second list contains element to be removed.
-			//third list contains all elements after the element to be removed.
-			//concatenate first and third list.
-			//clean up memory.
+			if(end != -1) {
+				int tmp[MAX_SIZE];
+				for (int i = curr; i < end; i++) {
+					list[i] = list[i + 1];
+				}
+				end--;
+				if(curr > end) {
+					curr--;
+				}
+			}
 		}
 
 		// replaces the value of the current element with the specified value
 		// this should not be possible for an empty list
 		void Replace(int data)
 		{
-			//if list is not empty.
-			//split list into three lists.
-			//first list contains all of the alements before element to be removed.
-			//second list contains element to be removed.
-			//third list contains all elements after the element to be removed.
-			//change value of single element in second list.
-			//concatenate first and third list.
-			//clean up memory.
+			if(end != -1) {
+				list[curr] = data;
+			}
 		}
 
 		// returns if the list is empty
 		bool IsEmpty() const
 		{
-			//if sizeof list == 0
-			//return true
+			if(end == -1) {
+				return true;
+			}
 		}
 
 		// returns if the list is full
 		bool IsFull()
 		{
-			//if sizeof list == MAX_SIZE
-			//return true
-			//else
-			//return false
+			if ((end + 1) == MAX_SIZE) {
+				return true;
+			} else{
+				return false;
+			}
 		}
 
 		// returns the concatenation of two lists
@@ -213,21 +256,44 @@ class List
 		// the last element of the new list is the current
 		List operator+(const List& l) const
 		{
-			//concatenate l and *this
+			int count = 0;
+			List tmp;
+			for (int i = 0; i < MAX_SIZE; i++) {
+				if(i<= end) {
+					tmp.InsertAfter(list[i]);
+				}
+				if( i > end ) {
+					tmp.InsertAfter(l.list[count]);
+					count++;
+				}
+			}
+			return tmp;
 		}
 
 		// returns if two lists are equal (by value)
 		bool operator==(const List& l) const
 		{
-			//if *this === l
-			//return true
+			bool flag = false;
+			for (int i = 0; i < MAX_SIZE; i++) {
+				if (l.list[i] != list[i]) {
+					flag = true;
+				}
+			}
+
+			return !flag;
 		}
 
 		// returns if two lists are not equal (by value)
 		bool operator!=(const List& l) const
 		{
-			//if *this != l
-			//return true
+			bool flag = false;
+			for (int i = 0; i < MAX_SIZE; i++) {
+				if (l.list[i] != list[i]) {
+					flag = true;
+				}
+			}
+
+			return flag;
 		}
 
 		// returns a string representation of the entire list (e.g., 1 2 3 4 5)
@@ -237,7 +303,7 @@ class List
 			if(l.end == -1) {
 				out << "NULL";
 			}
-			for(int i = 0; i <= l.curr; i++) {
+			for(int i = 0; i <= l.end; i++) {
 				out << l.list[i] << " ";
 			}
 
