@@ -24,6 +24,7 @@ class List
 		// remember that an empty list has a "size" of -1 and its "position" is at -1
 		List()
 		{
+			end = -1;
 			curr = -1;
 		}
 
@@ -53,10 +54,10 @@ class List
 
 		// navigates to the end of the list
 		// the end of the list is at the last valid item in the list
-		// this should not be possible for an empty list (although maybe it doesn't matter?)
+		// this should not be possible for an empty list (although maybe it doesn"t matter?)
 		void Last()
 		{
-			curr = (sizeof(list)/4) - 1;
+			curr = end;
 		}
 
 		// navigates to the specified element (0-index)
@@ -64,7 +65,9 @@ class List
 		// this should not be possible for invalid positions
 		void SetPos(int pos)
 		{
-			curr = pos;
+			if (pos >= 0 && pos <= MAX_SIZE)	{
+				curr = pos;
+			}
 		}
 
 		// navigates to the previous element
@@ -72,7 +75,7 @@ class List
 		// there should be no wrap-around
 		void Prev()
 		{
-			curr = curr - 1;
+			curr--;
 		}
 
 		// navigates to the next element
@@ -80,7 +83,7 @@ class List
 		// there should be no wrap-around
 		void Next()
 		{
-			curr = curr + 1;
+			curr++;
 		}
 
 		// returns the location of the current element (or -1)
@@ -90,16 +93,16 @@ class List
 		}
 
 		// returns the value of the current element (or -1)
-		int GetValue()
+		int GetValue() const
 		{
 			return list[curr];
 		}
 
 		// returns the size of the list
 		// size does not imply capacity
-		int GetSize() const
+		int GetSize()
 		{
-			return (sizeof(list)/4);
+			return end + 1;
 		}
 
 		// inserts an item before the current element
@@ -107,8 +110,24 @@ class List
 		// this should not be possible for a full list
 		void InsertBefore(int data)
 		{
-			//This is dogshit and needs to be fixed.
-			list = data + list;
+			if(end != MAX_SIZE) {
+				if (curr <= 0) {
+					curr = 0;
+					int tmp[end + 1];
+					tmp[0] = data;
+					for (int i = 1; i <= end +1; i++) {
+						tmp[i] = list[i - 1];
+					}
+
+					for (int i = 0; i <= end; i++) {
+						list[i] = tmp[i];
+					}
+					end++;
+				} else {
+					curr--;
+					InsertAfter(data);
+				}
+			}
 		}
 
 		// inserts an item after the current element
@@ -116,8 +135,32 @@ class List
 		// this should not be possible for a full list
 		void InsertAfter(int data)
 		{
-			//This is nothing but sudocode.
-			list = list + data;
+			if(end != MAX_SIZE) {
+				if (curr < 0) {
+					curr = 0;
+					end++;
+				} else {
+					curr++;
+					end++;
+				}
+
+				int tmp[end + 1];
+				int i = 0;
+				while (i <= end) {
+					if(i < curr) {
+						tmp[i] = list[i];
+					} else if (i == curr) {
+						tmp[i] = data;
+					} else if (i > curr) {
+						tmp[i] = list[i+1];
+					}
+					i++;
+				}
+
+				for (int k = 0; k <= end; k++) {
+					list[k] = tmp[k];
+				}
+			}
 		}
 
 		// removes the current element (collapsing the list)
@@ -176,14 +219,14 @@ class List
 		// returns if two lists are equal (by value)
 		bool operator==(const List& l) const
 		{
-			//if *this === l 
+			//if *this === l
 			//return true
 		}
 
 		// returns if two lists are not equal (by value)
 		bool operator!=(const List& l) const
 		{
-			//if *this != l 
+			//if *this != l
 			//return true
 		}
 
@@ -191,14 +234,13 @@ class List
 		// the string "NULL" should be returned for an empty list
 		friend ostream& operator<<(ostream& out, const List &l)
 		{
-			for (int i = 0; i < l.size; i++) {
-        		if (i < l.size - 1) {
-            		out << l.array[i] << ", ";
-        		} else {
-            		out << l.array[i] << endl;
-        		}
-    		}
+			if(l.end == -1) {
+				out << "NULL";
+			}
+			for(int i = 0; i <= l.curr; i++) {
+				out << l.list[i] << " ";
+			}
 
-    		return out;
+			return out;
 		}
 };
