@@ -7,6 +7,11 @@
         "iostream": "cpp",
         "istream": "cpp",
         "*h*h*hxutility": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "*ccxiosbase": "cpp",
+        "xtr1common": "cpp",
+        "xstddef": "cpp",
+        "type_traits": "cpp",
+        "ostream": "cpp"
     }
 }
