@@ -1,0 +1,10 @@
+complexity 10 points
+linked-list manipulation 10 points
+infix to postfix and stack evaluation 15 points
+ordered binary trees max heaps traversers and deletion for both 40 points (20 points each)
+2-3 trees 20 points
+sorting quick sort 15 points
+hash tables demonstrate insertion collision etc 20 points
+graphs how are they represented breadth and depth first searches mst 40 points
+170 points.
+bonus question for 10 points.

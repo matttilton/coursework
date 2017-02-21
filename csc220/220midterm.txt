@@ -1,0 +1,8 @@
+complexity 20 point
+multidimensional arrays 25 points how to declare, properties, how to manipulate them
+search and sort algorithms 25 point 3 sorts 2 searches
+linked list manipulation 25 points can you insert delete 
+stacks and queues 10 points
+infix to postfix and postfix evaluation using stacks 20 points
+pointers and arrays 10 points
+structs 10 points
