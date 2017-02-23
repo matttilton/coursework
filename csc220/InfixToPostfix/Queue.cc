@@ -1,188 +1,106 @@
 /****************************************************
- * <Matthew Tilton>
- * <2-13-17>
- * <Queue.cc>
+ * <your name>
+ * <the date>
+ * <the file name>
  *
- * A queue 
+ * <a simple, short program/class description>
  ****************************************************/
+
 #include <iostream>
-//This definitely compiles but you need to point it to the GenericList.cc that is on your computer.
 #include "GenericList.cc"
 
 using namespace std;
 
-template <class T>
-
+template<class q_type>
 class Queue
 {
-  private:
-    List<T> list;
+	private:
+		List<q_type> l;
 
-  public:
-    //Constructor
-    Queue()
-    {
-        List<T> l;
-        list = l;
-    }
+	public:
+		Queue()
+		{
+		}
 
-    //Copy contructor
-    Queue(const Queue &q)
-    {
-        int size = q.Size();
-        List<T> l = q.list;
-        l.Last();
-        for (int i = 0; i < size; i++)
-        {
-            Enqueue(l.GetValue());
-            l.Prev();
-        }
-    }
+		Queue(const Queue& q)
+		{
+			l = List<q_type>(q.l);
+			l.First();
+		}
 
-    //Copy constructor
-    void operator=(const Queue &q)
-    {
-        for (int i = 0; i < 30; i++)
-        {
-            list.Remove();
-        }
-        int size = q.Size();
-        List<T> l = q.list;
-        l.Last();
-        for (int i = 0; i < size; i++)
-        {
-            Enqueue(l.GetValue());
-            l.Prev();
-        }
-    }
+		void operator=(const Queue& q)
+		{
+			l = List<q_type>(q.l);
+			l.First();
+		}
 
-    //Puts a new item at the end of the queue
-    void Enqueue(T data)
-    {
-        if (!IsFull())
-        {
-            list.First();
-            list.InsertBefore(data);
-        }
-    }
+		q_type Peek()
+		{
+			q_type t;
 
-    //Removes the item at the front of the queue and returns it
-    T Dequeue()
-    {
-        if (!IsEmpty())
-        {
-            list.Last();
-            T tmp = list.GetValue();
-            list.Remove();
-            return tmp;
-        }
-    }
+			l.First();
+			t = l.GetValue();
+			l.Last();
 
-    //Shows the item at the front of the queue
-    T Peek()
-    {
-        if (IsEmpty())
-        {
-            return -1;
-        }
-        else
-        {
-            list.Last();
-            return list.GetValue();
-        }
-    }
+			return t;
+		}
 
-    //Returns the size of the queue
-    int Size() const
-    {
-        return list.GetSize();
-    }
+		int Size()
+		{
+			return l.GetSize();
+		}
 
-    //returns true if queue is empty
-    bool IsEmpty() const
-    {
-        return list.IsEmpty();
-    }
+		void Enqueue(q_type data)
+		{
+			l.InsertAfter(data);
+		}
 
-    //returns true if queue if full
-    bool IsFull() const
-    {
-        return list.IsFull();
-    }
+		q_type Dequeue()
+		{
+			q_type t;
+			
+			l.First();
+			t = l.GetValue();
+			l.Remove();
+			l.Last();
 
-    //Adds two queues together
-    Queue operator+(const Queue &q) const
-    {
-        Queue<T> q1 = q;
-        Queue<T> q2 = *this;
-        Queue<T> q3;
-        while (!q2.IsEmpty())
-        {
-            q3.Enqueue(q2.Dequeue());
-        }
-        while (!q1.IsEmpty())
-        {
-            q3.Enqueue(q1.Dequeue());
-        }
-        return q3;
-    }
+			return t;
+		}
 
-    //Determines equality of two queues
-    bool operator==(const Queue &q) const
-    {
-        Queue<T> tmp1 = q;
-        Queue<T> tmp2 = *this;
-        bool flag = false;
-        int i = 0;
-        if (tmp1.Size() == tmp2.Size())
-        {
-            while (i < q.Size() && !flag)
-            {
+		bool IsEmpty()
+		{
+			return l.IsEmpty();
+		}
 
-                if (tmp1.Peek() != tmp2.Peek())
-                {
-                    flag = true;
-                }
-                tmp1.Dequeue();
-                tmp2.Dequeue();
-                i++;
-            }
-            if (flag)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-        else
-        {
-            return false;
-        }
-    }
+		bool IsFull()
+		{
+			return l.IsFull();
+		}
 
-    //Determines oposite equality of two queues
-    bool operator!=(const Queue &q) const
-    {
-        return !(*this == q);
-    }
+		Queue operator+(const Queue& q) const
+		{
+			Queue<q_type> q2(*this);
 
-    //outputs of stream
-    friend ostream &operator<<(ostream &out, const Queue &q)
-    {
-        Queue<T> queue = q;
-        if (q.Size() == 0)
-        {
-            out << "NULL";
-        }
-        else
-        {
-            for (int i = 0; i < q.Size(); i++)
-            {
-                out << queue.Dequeue() << " ";
-            }
-        }
-        return out;
-    }
+			q2.l = q2.l + q.l;
+			q2.l.First();
+
+			return q2;
+		}
+
+		bool operator==(const Queue& q) const
+		{
+			return (*this).l == q.l;
+		}
+
+		bool operator!=(const Queue& q) const
+		{
+			return (*this).l != q.l;
+		}
+
+		friend ostream& operator<<(ostream& out, const Queue& q)
+		{
+			out << q.l;
+
+			return out;
+		}
 };

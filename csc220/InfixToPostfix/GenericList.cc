@@ -1,25 +1,24 @@
 /****************************************************
- * <Matthew Tilton>
- * <2-8-17>
- * <GenericList.cc>
+ * <your name>
+ * <the date>
+ * <the file name>
  *
- * Generic Linked list
+ * <a simple, short program/class description>
  ****************************************************/
 
 #include <iostream>
 using namespace std;
 
-const int MAX_SIZE = 30;
+const int MAX_SIZE = 1024;
 
-template <class T>
-
+template <class l_type>
 class List
 {
 	private:
 		// list node definition
 		struct Node
 		{
-			T data;
+			l_type data;
 			Node *link;
 		};
 
@@ -31,140 +30,146 @@ class List
 	public:
 		// constructor
 		// remember that an empty list has a "size" of -1 and its "position" is at -1
-		List() {
+		List()
+		{
+			head = tail = curr = NULL;
 			num_items = 0;
-			head = NULL;
-			tail = NULL;
-			curr = NULL;
 		}
 
 		// copy constructor
 		// clones the list l and sets the last element as the current
-		List(const List& l) {
-			num_items = 0;
-			head = tail = curr = NULL;
-			Node* p = l.head;
-			while (p != NULL) {
-				InsertAfter(p -> data);
-				p = p -> link;
-			}
+		List(const List& l)
+		{
+			*this = l;
 		}
 
 		// copy constructor
 		// clones the list l and sets the last element as the current
-		void operator=(const List& l) {
-			num_items = 0;
-			head = tail = curr = NULL;
-			Node* p = l.head;
-			while (p != NULL) {
-				InsertAfter(p -> data);
-				p = p -> link;
-			}
-		}
+		void operator=(const List& l)
+		{
+			Node *n = l.head;
 
-		//Returns the head of the list
-		Node* Head() const {
-			return head;
+			head = tail = curr = NULL;
+			num_items = 0;
+
+			// just loop through the list and copy each element
+			while (n != NULL)
+			{
+				InsertAfter(n->data);
+				n = n->link;
+			}
 		}
 
 		// navigates to the beginning of the list
-		void First() {
-			if (!IsEmpty()) {
-				curr = head;
-			}
+		void First()
+		{
+			curr = head;
 		}
 
 		// navigates to the end of the list
 		// the end of the list is at the last valid item in the list
-		void Last() {
-			if (!IsEmpty()) {
-				curr = tail;
-			}
+		void Last()
+		{
+			curr = tail;
 		}
 
 		// navigates to the specified element (0-index)
 		// this should not be possible for an empty list
 		// this should not be possible for invalid positions
-		void SetPos(int pos) {
-			int counter = 0;
-			if (!IsEmpty() && pos < num_items && pos >= 0) {
+		void SetPos(int pos)
+		{
+			if (!IsEmpty() && pos >=0 && pos < num_items)
+			{
 				curr = head;
-				while (counter < pos) {
-					curr = curr -> link;
-					counter++;
-				}
+
+				// move curr to the specified position
+				for (int i=0; i<pos; i++)
+					curr = curr->link;
 			}
 		}
 
 		// navigates to the previous element
 		// this should not be possible for an empty list
 		// there should be no wrap-around
-		void Prev() {
-			if (curr != head) {
-				Node* p = head;
-				while(p -> link != curr) {
-					p = p -> link;
-				}
-				curr = p;
+		void Prev()
+		{
+			if (!IsEmpty() && curr != head)
+			{
+				Node *n = head;
+
+				// move n to the previous element
+				while (n->link != curr)
+					n = n->link;
+
+				curr = n;
 			}
 		}
 
 		// navigates to the next element
 		// this should not be possible for an empty list
 		// there should be no wrap-around
-		void Next() {
-			if (!IsEmpty()) {
-				if (curr -> link != NULL) {
-					curr = curr -> link;
-				}
-			}
+		void Next()
+		{
+			if (!IsEmpty() && curr != tail)
+				curr = curr->link;
 		}
 
 		// returns the location of the current element (or -1)
-		int GetPos() const {
-			if (IsEmpty()) {
+		int GetPos()
+		{
+			if (IsEmpty())
 				return -1;
-			}	else {
-				int pos = 0;
-				Node* p = head;
-				while (p!= curr) {
-					p = p -> link;
-					pos++;
-				}
-				return pos;
+
+			Node *n = head;
+			int i = 0;
+
+			// traverse the list to get the current position
+			while (n != curr)
+			{
+				n = n->link;
+				i++;
 			}
+
+			return i;
 		}
 
 		// returns the value of the current element (or -1)
-		T GetValue() const {
-			if (IsEmpty()) {
-				return -1;
-			}	else {
-				return curr -> data;
-			}
+		l_type GetValue()
+		{
+			return ((!IsEmpty()) ? curr->data : -1);
 		}
 
 		// returns the size of the list
 		// size does not imply capacity
-		int GetSize() const {
-			return (num_items);
+		int GetSize()
+		{
+			return num_items;
 		}
 
 		// inserts an item before the current element
 		// the new element becomes the current
 		// this should not be possible for a full list
-		void InsertBefore(T data) {
-			if (!IsFull()) {
-				if(IsEmpty()) {
+		void InsertBefore(l_type data)
+		{
+			if (!IsFull())
+			{
+				// if the list is empty, just insert after
+				if (IsEmpty())
 					InsertAfter(data);
-				} else {
-					if (curr == head) {
-						curr = new Node;
-						curr -> data = data;
-						curr -> link = head;
-						head = curr;
+				else
+				{
+					// if we're at the beginning, just create a new head that points to the current one
+					if (curr == head)
+					{
+						head = new Node;
+						head->data = data;
+						head->link = curr;
+						curr = head;
 						num_items++;
-					}	else {
+					}
+					// otherwise, navigate to the previous node and insert after
+					else
+					{
 						Prev();
 						InsertAfter(data);
 					}
@@ -175,50 +180,61 @@ class List
 		// inserts an item after the current element
 		// the new element becomes the current
 		// this should not be possible for a full list
-		void InsertAfter(T data) {
-			if (!IsFull()) {
-				if (IsEmpty()) {
-					head = new Node;
-					head -> data = data;
-					head -> link = NULL;
-					curr = head;
-					tail = head;
-					num_items++;
-				}	else {
-					if (curr == tail) {
-						curr -> link = new Node;
-						curr = curr -> link;
-						curr -> data = data;
-						curr -> link = NULL;
-						tail = curr;
-						num_items++;
-					}	else {
-						Node* p = new Node;
-						p -> data = data;
-						p -> link = curr -> link;
-						curr -> link = p;
-						curr = p;
-						num_items++;
+		void InsertAfter(l_type data)
+		{
+			if (!IsFull())
+			{
+				Node *n = new Node;
+
+				n->data = data;
+				n->link = NULL;
+
+				// if the list is empty, everything points to the single node
+				if (IsEmpty())
+					head = tail = curr = n;
+				else
+				{
+					// if we're at the end, just tack the new node on
+					if (curr == tail)
+					{
+						curr->link = n;
+						curr = tail = n;
+					}
+					// otherwise, change the links to insert the node
+					else
+					{
+						n->link = curr->link;
+						curr = curr->link = n;
 					}
 				}
+
+				num_items++;
 			}
 		}
 
 		// removes the current element (collapsing the list)
 		// this should not be possible for an empty list
-		void Remove() {
-			if (!IsEmpty()) {
-				if (curr == head) {
-					head = curr -> link;
-					delete curr;
-					curr = head;
-				} else {
+		void Remove()
+		{
+			if (!IsEmpty())
+			{
+				// if we're at the beginning, reset the head
+				if (curr == head)
+				{
+					head = curr = curr->link;
+
+					if (head == NULL)
+						tail = NULL;
+				}
+				else
+				{
 					Prev();
-					curr -> link = curr -> link -> link;
-					Next();
-					if (curr->link == NULL) {
+					// and rearrange the pointer to remove this node
+					curr->link = curr->link->link;
+					// we handle removing the tail vs. other internal nodes a bit differently
+					if (curr->link == NULL)
 						tail = curr;
-					}
+					Next();
 				}
 				num_items--;
 			}
@@ -226,19 +242,21 @@ class List
 
 		// replaces the value of the current element with the specified value
 		// this should not be possible for an empty list
-		void Replace(T data) {
-			if (!IsEmpty()) {
-				curr -> data = data;
-			}
+		void Replace(l_type data)
+		{
+			if (!IsEmpty())
+				curr->data = data;
 		}
 
 		// returns if the list is empty
-		bool IsEmpty() const {
-			return (num_items == 0);
+		bool IsEmpty()
+		{
+			return (head == NULL);
 		}
 
 		// returns if the list is full
-		bool IsFull() const {
+		bool IsFull()
+		{
 			return (num_items == MAX_SIZE);
 		}
 
@@ -247,70 +265,70 @@ class List
 		// l should be concatenated to the end of *this
 		// the returned list should not exceed MAX_SIZE elements
 		// the last element of the new list is the current
-		List operator+(const List& l) const {
-				List tmp;
-				List val_left = (*this);
-				List val_right = l;
-				val_left.First();
-				val_right.First();
-				int counter = 0;
-				while (counter < val_left.GetSize()) {
-					tmp.InsertAfter(val_left.GetValue());
-					val_left.Next();
-					counter++;
-				}
-				counter = 0;
-				while (counter < val_right.GetSize()) {
-					tmp.InsertAfter(val_right.GetValue());
-					val_right.Next();
-					counter++;
-				}
-				return (tmp);
+		List operator+(const List& l) const
+		{
+			// copy the first list
+			List t = *this;
+			Node *n = l.head;
+
+			// iterate through the second list and copy each element to the new list
+			while (n != NULL && !t.IsFull())
+			{
+				t.InsertAfter(n->data);
+				n = n->link;
+			}
+
+			return t;
 		}
 
 		// returns if two lists are equal (by value)
-		bool operator==(const List& l) const {
-			bool flag = false;
-			int counter = 0;
-			int max;
-			if (l.GetSize() > (*this).GetSize()) {
-				max = l.GetSize();
-			} else {
-				max = (*this).GetSize();
+		bool operator==(const List& l) const
+		{
+			// the lists are not equal if they're of different sizes
+			if (num_items != l.num_items)
+				return false;
+
+			Node *p = head;
+			Node *q = l.head;
+
+			// iterate through each list
+			while (p != NULL)
+			{
+				// if any pair of elements differ, the lists are not equal
+				if (p->data != q->data)
+					return false;
+				p = p->link;
+				q = q->link;
 			}
-			if (l.GetSize() == (*this).GetSize()) {
-				Node* val_left = (*this).Head();
-				Node* val_right = l.Head();
-				while (!flag && (counter < max)) {
-					if ((val_left -> data) != (val_right -> data)) {
-						flag == true;
-					} else {
-						counter++;
-						val_left = val_left -> link;
-						val_right = val_right -> link;
-					}
-				}
-			}
+
+			return true;
 		}
 
 		// returns if two lists are not equal (by value)
-		bool operator!=(const List& l) const {
-			return !operator == (l);
+		bool operator!=(const List& l) const
+		{
+			return !(*this == l);
 		}
 
 		// returns a string representation of the entire list (e.g., 1 2 3 4 5)
 		// the string "NULL" should be returned for an empty list
-		friend ostream& operator<<(ostream& out, const List &l) {
-			if (l.num_items == 0) {
+		friend ostream& operator<<(ostream& out, const List &l)
+		{
+			// "NULL" if the list is empty
+			if (l.head == NULL)
 				out << "NULL";
-			} else {
-				Node* p = l.head;
-				while (p != NULL)
+			else
+			{
+				Node *n = l.head;
+
+				// otherwise iterate through the list and display each element separated by a space
+				while (n != NULL)
 				{
-					out << p->data << " ";
-					p = p->link;
+					out << n->data << " ";
+					n = n->link;
 				}
 			}
+
 			return out;
 		}
 };

@@ -1,187 +1,96 @@
 /****************************************************
- * <Matthew Tilton>
- * <2-13-17>
- * <Stack.cc>
+ * <your name>
+ * <the date>
+ * <the file name>
  *
- * A stack
+ * <a simple, short program/class description>
  ****************************************************/
-#include <iostream>
-//This definitely compiles but you need to point it to the GenericList.cc that is on your computer.
-#include "GenericList.cc"
 
+#include <iostream>
+#include "GenericList.cc"
 using namespace std;
 
-template <class T>
-
+template<class s_type>
 class Stack
 {
-  private:
-    List<T> list;
+	private:
+		List<s_type> l;
 
-  public:
-    //Constructor
-    Stack()
-    {
-        List<T> l;
-        list = l;
-    }
+	public:
+		Stack()
+		{
+		}
 
-    //Copy contructor
-    Stack(const Stack &s)
-    {
-        int size = s.Size();
-        List<T> l = s.list;
-        l.Last();
-        for (int i = 0; i < size; i++)
-        {
-            Push(l.GetValue());
-            l.Prev();
-        }
-    }
+		Stack(const Stack& s)
+		{
+			l = List<s_type>(s.l);
+			l.First();
+		}
 
-    //Copy constructor
-    void operator=(const Stack &s)
-    {
-        for (int i = 0; i < 30; i++)
-        {
-            list.Remove();
-        }
-        int size = s.Size();
-        List<T> l = s.list;
-        l.Last();
-        for (int i = 0; i < size; i++)
-        {
-            Push(l.GetValue());
-            l.Prev();
-        }
-    }
+		void operator=(const Stack& s)
+		{
+			l = List<s_type>(s.l);
+			l.First();
+		}
 
-    //Puts a new item on top of the stack
-    void Push(T data)
-    {
-        if (!IsFull())
-        {
-            list.First();
-            list.InsertBefore(data);
-        }
-    }
+		s_type Peek()
+		{
+			return l.GetValue();
+		}
 
-    //Removes the item on top of the stack
-    void Pop()
-    {
-        if (!IsEmpty())
-        {
-            list.First();
-            list.Remove();
-        }
-    }
+		int Size()
+		{
+			return l.GetSize();
+		}
 
-    //Shows the item on top of the stack
-    T Peek()
-    {
-        if (IsEmpty())
-        {
-            return -1;
-        }
-        else
-        {
-            list.First();
-            return list.GetValue();
-        }
-    }
+		void Push(s_type data)
+		{
+			l.InsertBefore(data);
+		}
 
-    //Returns the size of the stack
-    int Size() const
-    {
-        return list.GetSize();
-    }
+		s_type Pop()
+		{
+			s_type t = l.GetValue();
 
-    //returns true if stack is empty
-    bool IsEmpty() const
-    {
-        return list.IsEmpty();
-    }
+			l.Remove();
 
-    //returns true if stack if full
-    bool IsFull() const
-    {
-        return list.IsFull();
-    }
+			return t;
+		}
 
-    //Adds two stacks together
-    Stack operator+(const Stack &s) const
-    {
-        List<T> right = s.list;
-        Stack<T> s1;
-        Stack<T> s2 = *this;
-        List<T> left = s2.list;
-        List<T> both = left + right;
-        both.Last();
-        while (!both.IsEmpty())
-        {
-            s1.Push(both.GetValue());
-            both.Remove();
-        }
-        return s1;
-    }
+		bool IsEmpty()
+		{
+			return l.IsEmpty();
+		}
 
-    //Determines equality of two stacks
-    bool operator==(const Stack &s) const
-    {
-        Stack<T> tmp1 = s;
-        Stack<T> tmp2 = *this;
-        bool flag = false;
-        int i = 0;
-        if (tmp1.Size() == tmp2.Size())
-        {
-            while (i < s.Size() && !flag)
-            {
+		bool IsFull()
+		{
+			return l.IsFull();
+		}
 
-                if (tmp1.Peek() != tmp2.Peek())
-                {
-                    flag = true;
-                }
-                tmp1.Pop();
-                tmp2.Pop();
-                i++;
-            }
-            if (flag)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-        else
-        {
-            return false;
-        }
-    }
+		Stack operator+(const Stack& s) const
+		{
+			Stack<s_type> s2(*this);
 
-    //Determines oposite equality of two stacks
-    bool operator!=(const Stack &s) const
-    {
-        return !(*this == s);
-    }
+			s2.l = s2.l + s.l;
+			s2.l.First();
 
-    //outputs of stream
-    friend ostream &operator<<(ostream &out, const Stack &s)
-    {
-        Stack<T> stack = s;
-        if (s.Size() == 0)
-        {
-            out << "NULL";
-        }
-        else
-        {
-            for (int i = 0; i < s.Size(); i++)
-            {
-                out << stack.Peek() << " ";
-                stack.Pop();
-            }
-        }
-        return out;
-    }
+			return s2;
+		}
+
+		bool operator==(const Stack& s) const
+		{
+			return (*this).l == s.l;
+		}
+
+		bool operator!=(const Stack& s) const
+		{
+			return (*this).l != s.l;
+		}
+
+		friend ostream& operator<<(ostream& out, const Stack& s)
+		{
+			out << s.l;
+
+			return out;
+		}
 };
