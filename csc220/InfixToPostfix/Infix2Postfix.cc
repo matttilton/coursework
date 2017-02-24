@@ -1,4 +1,15 @@
+/****************************************************
+ * <Matthew Tilton>
+ * <2-23-17>
+ * <Infix2Postfix.cc>
+ *
+ * Infix2Postfix
+ ****************************************************/
+
+//The list stack and queue classes are all Dr. Kiremire's. All other code was written by Matthew Tilton.
+
 #include <iostream>
+#include <cmath>
 // #ifndef __GenericList_CC_INCLUDED__
 // #include "Queue.cc"
 // #include "Stack.cc"
@@ -6,7 +17,7 @@ using namespace std;
 
 const int MAX_SIZE = 1024;
 
-//Fuck it the compiler is pissing me off. search for --- to get to the good stuff
+//Fuck it the compiler is pissing me off. Search for --- to get to the good stuff. Its trying to include GenericList.cc twice and I really dont feel like figuring out how to fix it.
 template <class l_type>
 class List
 {
@@ -507,17 +518,82 @@ class Stack
         return out;
     }
 };
-
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+//Function promises
 bool IsOp(char ch);
+int stackPriority(char data);
+int infixPriority(char data);
 
 int main() {
-    char input[1024];
-    Stack<char> s;
-    Queue<char> q;
-    while(cin.getline(input, 1024)) {
-        for(int i = 0; i <= 1; i++){
-            cout << IsOp(input[i]) << endl;
+    string input;
+    while(getline(cin, input)) {
+        Stack<char> s;
+        Queue<char> infixq;
+        Queue<char> postfixq;
+        char op;
+        cout << input << endl;
+        for (int i = 0; i < input.length(); i++) {
+            infixq.Enqueue(input[i]);
         }
+        //lets convert to postfix
+        do {
+            char tmp = infixq.Dequeue();
+            if(!IsOp(tmp)){
+                postfixq.Enqueue(tmp);
+            } else if (tmp == ')') {
+                op = s.Pop();
+                while(op != '(') {
+                    postfixq.Enqueue(op);
+                    op = s.Pop();
+                }
+            } else {
+                op = s.Peek();
+                while (stackPriority(op) >= infixPriority(tmp)) {
+                    op = s.Pop();
+                    postfixq.Enqueue(op);
+                    op = s.Peek();
+                }
+                s.Push(tmp);
+            }
+        } while(!infixq.IsEmpty());
+        while(!s.IsEmpty()) {
+            op = s.Pop();
+            postfixq.Enqueue(op);
+        }
+
+        //Prints postfixq in desired format
+        Queue<char> tmpq = postfixq;
+        while(!tmpq.IsEmpty()) {
+            cout << tmpq.Dequeue();
+        }
+        cout << endl;
+
+        //Calculate answer
+        Stack<float> s2;
+        while(!postfixq.IsEmpty()) {
+            if(IsOp(postfixq.Peek())) {
+                float right = s2.Pop();
+                float left = s2.Pop();
+                char operation = postfixq.Dequeue();
+                if (operation == '+') {
+                    s2.Push(left+right);
+                } else if (operation == '-') {
+                    s2.Push(left-right);
+                } else if (operation == '*') {
+                    s2.Push(left*right);
+                } else if (operation == '/') {
+                    s2.Push(left/right);
+                } else if (operation == '^') {
+                    s2.Push(pow(left, right));
+                }
+                
+            } else {
+                s2.Push((postfixq.Dequeue() - '0'));
+            }
+        }
+        cout << s2.Peek() << endl;
+        cout << endl;
+
     }
     return 0;
 
@@ -525,4 +601,38 @@ int main() {
 
 bool IsOp(char data) {
     return (data < '0' || data > '9');
+}
+
+int infixPriority(char data) {
+    if (data == '(') {
+        return 4;
+    } else if (data == '^') {
+        return 3;
+    } else if (data == '*') {
+        return 2;
+    } else if (data == '/') {
+        return 2;
+    } else if (data == '+') {
+        return 1;
+    } else if (data == '-') {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int stackPriority(char data) {
+    if (data == '^') {
+        return 2;
+    } else if (data == '*') {
+        return 2;
+    } else if (data == '/') {
+        return 2;
+    } else if (data == '+') {
+        return 1;
+    } else if (data == '-') {
+        return 1;
+    } else {
+        return 0;
+    }
 }
