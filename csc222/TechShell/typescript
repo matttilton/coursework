@@ -1,0 +1,41 @@
+Script started on Fri 17 Feb 2017 11:03:39 PM CST
+]0;matt@matt-ubuntu: ~/Code/coursework/csc222/TechShell[01;32mmatt@matt-ubuntu[00m:[01;34m~/Code/coursework/csc222/TechShell[00m$ ./a.out
+/home/matt/Code/coursework/csc222/TechShell>echo simples commands
+simplecommands
+/home/matt/Code/coursework/csc222/TechShell>ls
+techShell: Bad address
+/home/matt/Code/coursework/csc222/TechShell>ls
+a.out  Shell.cc  StringParserC.cc  typescript
+/home/matt/Code/coursework/csc222/TechShell>echo unresolev  vedBugAbove
+unresolvedBugAbove
+/home/matt/Code/coursework/csc222/TechShell>echo builtInCommands
+techShell: Bad address
+/home/matt/Code/coursework/csc222/TechShell>echo builtInCommands
+builtInCommands
+/home/matt/Code/coursework/csc222/TechShell>cd
+techShell: Bad address
+/home/matt/Code/coursework/csc222/TechShell>cd ..
+/home/matt/Code/coursework/csc222
+/home/matt/Code/coursework/csc222>cd TechShell
+/home/matt/Code/coursework/csc222/TechShell
+/home/matt/Code/coursework/csc222/TechShell>pwd
+/home/matt/Code/coursework/csc222/TechShell
+/home/matt/Code/coursework/csc222/TechShell>echo exitWorksButIWillShowThatLater
+techShell: Bad address
+/home/matt/Code/coursework/csc222/TechShell>e echo R redirection does not         Does  NotWork
+redirectionDoesNotWork
+/home/matt/Code/coursework/csc222/TechShell>echo errors
+techShell: Bad address
+/home/matt/Code/coursework/csc222/TechShell>echo erros
+erros
+/home/matt/Code/coursework/csc222/TechShell>cd
+techShell: cd needs arguments
+/home/matt/Code/coursework/csc222/TechShell>cd asdhakjd asdasdahsjd
+techShell: No such file or directory
+/home/matt/Code/coursework/csc222/TechShell>good bye
+techShell: No such file or directory
+/home/matt/Code/coursework/csc222/TechShell>exit
+]0;matt@matt-ubuntu: ~/Code/coursework/csc222/TechShell[01;32mmatt@matt-ubuntu[00m:[01;34m~/Code/coursework/csc222/TechShell[00m$ exit
+exit
+
+Script done on Fri 17 Feb 2017 11:06:33 PM CST
