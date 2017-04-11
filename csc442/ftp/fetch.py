@@ -1,3 +1,9 @@
+"""
+Matthew Tilton
+2017-04-10
+
+Gets the file permissions from the files on a ftp server and converts them into readable binary.
+"""
 import time
 from ftplib import FTP
 
@@ -81,7 +87,7 @@ def parseFilePermissions(x):
 #Establish FTP Connection using convenient library
 ftp = FTP('www.jeangourd.com')
 ftp.login()
-ftp.cwd('~/10')
+ftp.cwd('~/7')
 ftp.retrlines('LIST', parseFilePermissions) #get a list of the files 
 
 time.sleep(1) #wait some time may need to increase
