@@ -12,8 +12,10 @@ import time
 import sys
 
 # consant declaration
+# setting debug to True will get current times from the second line of
+# the input
 USE_SYSTEM_TIME = False
-DEBUG = True
+DEBUG = False
 
 
 def isletter(char):
@@ -90,7 +92,7 @@ def main():
         current_time_dst = rudimentary_dst_check(current_time_array)
         current_time_date = datetime(int(current_time_array[0]), int(current_time_array[1]), int(
             current_time_array[2]), int(current_time_array[3]), int(current_time_array[4]),
-                                     int(current_time_array[5]))
+            int(current_time_array[5]))
 
     # calculates the current number of seconds that have elapsed since the
     # epoch
