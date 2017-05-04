@@ -3,7 +3,7 @@ Matthew Tilton
 5-3-2017
 Simple timelock algorithm for csc442.
 test script can be found on github at
-github.com/matttilton/coursework/csc442/Timelock/timelocktest.sh
+https://github.com/matttilton/coursework/blob/master/csc442/Timelock/timelocktest.sh
 """
 import fileinput
 from datetime import datetime, date
