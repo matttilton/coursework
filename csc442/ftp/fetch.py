@@ -85,9 +85,9 @@ def parseFilePermissions(x):
     
 
 #Establish FTP Connection using convenient library
-ftp = FTP('www.jeangourd.com')
+ftp = FTP('192.168.1.100')
 ftp.login()
-ftp.cwd('~/7')
+ftp.cwd('~/incoming')
 ftp.retrlines('LIST', parseFilePermissions) #get a list of the files 
 
 time.sleep(1) #wait some time may need to increase

@@ -67,7 +67,7 @@ def main():
     """
 
     # set default current time value
-    current_time = "2017 05 04 12 57 34"
+    current_time = "2017 05 04 10 16 45"
 
     # read input from stdin
     input_file = fileinput.input()
@@ -157,6 +157,8 @@ def main():
             if len(result_code) >= 4:
                 break
 
+    length = len(md5)
+    result_code = result_code + md5[(length/2)]
     # print to stdout dont include newline if debuging
     if DEBUG:
         sys.stdout.write(result_code)
