@@ -1,0 +1,24 @@
+Tools
+    Ida Pro
+    Burpe Suite
+    Oracle Virtual Box
+    OWASP WebGoat - OWASP application testing guide
+    Linux
+
+Taxonomy of codeborne flaws
+pernicious kingdoms
+foxglove remote code execution
+searialization deserialization flaws
+
+individual project - 80%
+    reverse engineer an opensource project to create something new, clone, or exploit its behavior.
+
+group project - 20%
+    find new vulnerability in 3rd party opensource development thing
+
+for next time
+------------------
+download and install WebGoat on vm
+download the owasp application testing guide
+set up burpesuite
+------------------

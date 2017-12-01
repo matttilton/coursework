@@ -1,0 +1,2 @@
+LISTEN     0      5      192.168.122.1:53                       *:*                   users:(("dnsmasq",pid=1903,fd=6))
+LISTEN     0      5      192.168.122.1:53                       *:*                   users:(("dnsmasq",pid=1903,fd=6))
