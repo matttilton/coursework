@@ -4,9 +4,15 @@ What Operating systems do
     Control program
         controls execution of programs to prevent errors and improper use of the computer
 
-computer system organization
-computer system architechture
-operating system structure
-operating system operations
-process management
-memory management
+bootstrap program
+    stored in rom or eprom - firmware
+    initializes system
+    loads operating system kernel and start execution
+
+io and cpu work concurently
+every io device has its own controller
+each controller has a local buffer
+cpu moves data between buffers and memory
+io is from the device to local buffer of controller
+device controller informs cpu that it has finished its operation by triggering an interrupt
+
