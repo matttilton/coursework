@@ -1,3 +1,5 @@
+Lecture 1
+
 What Operating systems do
     Resourece allocation
         decides between conflicting requests for efficient and fair resource use
@@ -15,4 +17,134 @@ each controller has a local buffer
 cpu moves data between buffers and memory
 io is from the device to local buffer of controller
 device controller informs cpu that it has finished its operation by triggering an interrupt
+von Neumann architechture
 
+-------------------------------------------------------------------------------------------
+Lecture 2
+Homework 1
+    two page writeup broad classification of operating systems 12 pt font times new roman 1 inch borders single line
+
+multiprocessors also known as parrallel systems or tightly coupled systems
+    advantages
+        increased throughput
+        economy of scale
+        increased reliability - graceful degredation or fault tolerance - single hardware failure does not cause computer failure
+    two types
+        asymmetric multiprocessing - each processor is assigned a specific task
+        symetric multiprocessing - each processor performs all tasks
+Symetric multiproccessing
+    each cpu has its own registers and caches
+    every cpu shares the same memory
+
+Dual-Core design
+    system contains all chips but are still multiple seperate systems
+
+Clustered systems
+    like multiprocessors but they are working together over the same network
+    usually shared storage via a storage area network (SAN)
+    provides high-availability
+        asymmetric clustering has one machine in hot-standby mode
+        symetric clustering has multiple nodes running applications, monitoring each other
+    some clusters are for high performance computing (HPC)
+        Applications must be written to use parrallelization
+    some have distributed lock manager (DLM) to avoid conflicting operations 
+
+Operating systemm structure
+    Multiprogramming (batch system) needed for efficiency
+        single user cannot keep cpu and io devices busy at all times
+        multiprogramming organizes jobs so cpu always has one to execute
+        a subset of total jobs in system is kept in memory
+        one job selected and run via job scheduling
+        when it has to waiti os switches to another job
+    
+    timesharing (multitasking) is logical extension in which cpu switches jobs so frequently that users can interact with each job while it is running, creating interactive computing
+        response time should be less than 1 second
+        each user has at least one program executing in memory => process
+        if several jobs ready to run at the same time => CPU scheduling
+        if process dont fit in memory swapping moves tham in and out to run
+        virtual memory allows execution of processes not completely ...
+interrupt driven
+    hardware interrupt
+    software interrupt
+        error
+        request for system services
+        other process problems (infinite loop, proccesses modifying each other or the os)
+
+dual-mode
+    user mode and kernel mode
+    mode bit provided by hardware
+        distinguishes between user and kernel mode
+        some instructions may only be executed in kernel mode
+        system call changes mode to kernel return from call resets it to user
+    increasingly cpus support multi-mode operations
+        virtual machine manager (VMM) mode for guest VMs
+
+Process Management
+    a process is a program in execution
+        programs are passive
+        processes are active
+    processes need resources to accomplish its task
+        CPU, memory, io, files
+        initialization data
+    process termination requires reclaim of any reusable resources
+    single-threaded process has one program counter specifying location of next instruction to execute
+        process executes instructions sequentially
+    multi-threaded process has one program counter per thread
+    typically systems have many processes running on one or more cpus
+        concurency by multiplexing the cpus amoung the processes/threads
+
+Process management activities
+    creating
+    suspending
+    synchronization
+    communication
+    handling
+
+memory management
+    to execute a program all of the instructions must be in memory
+    all or part of the data that is needed by the program must be in memory
+    memory management determines what is in memory and when 
+        optimizing cpu utilization and omputer resources to users
+    memory management activities
+        keeping track of who is using what
+        deciding which process to move in and out of memory
+        allocating and deallocating memory space as needed
+
+Storage management
+    os provides uniform logical view of information storage
+        abstracts physical properties to logical storage unit
+        each medium is controlled by device
+    file system management
+        access controlled
+        activities
+            creating and deleting files
+            primitives to manipulate files
+            mapping files to secondary storage
+            backup files onto stabel non-volatile media
+
+mass storage management
+    usually disks that store data for long periods of time
+    proper management is important
+    speed of computer depends on disk subsystem
+    os activities
+        free-space management
+        disk allocation
+        something else that is didnt catch
+
+Protection and Security
+    Protection - any mehcanism for controlling access 
+    Security - defense of system against internal and external attacks
+
+kernel data structures
+    sll - singly linked list
+    dll - doubly linked list
+    cll - circularly linked list
+    binary search tree
+    hash functions
+    bitmap
+
+traditional computing environment
+    stand alone general purpose machines
+    blurred as most systems interconnect with others
+    portals provide web access to internal systems
+    ...
