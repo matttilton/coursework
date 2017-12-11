@@ -1,0 +1,13 @@
+tokens - things that language can do (if, 512) some collection of characters that are meaningful
+lexical analysis - find tokens and figures out what each token is
+sentences - if statement, assignment statement
+syntax analysis - makes sense of te sentences
+
+
+Compiler
+(source => [lexical scanner] => tokens => [syntax parser] => syntax tree => [semantic analyzer] => syntax tree => [intermediate code generator] => intermediate representation => [optimizer] =>
+intermediate representation => [code generator] => target machine code)
+=> Assembler => Linker
+
+Symbol table - tracks symbols (variable, constants, functions) tracks scope
+Error handler - handles error
