@@ -132,7 +132,7 @@ mass storage management
         something else that is didnt catch
 
 Protection and Security
-    Protection - any mehcanism for controlling access 
+    Protection - any mehcanism for controlling access
     Security - defense of system against internal and external attacks
 
 kernel data structures
@@ -148,3 +148,4 @@ traditional computing environment
     blurred as most systems interconnect with others
     portals provide web access to internal systems
     ...
+    

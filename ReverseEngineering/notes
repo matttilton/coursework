@@ -22,3 +22,11 @@ download and install WebGoat on vm
 download the owasp application testing guide
 set up burpesuite
 ------------------
+
+mutex - indvidual
+semaphore - user defined more that once but with a finite limit
+
+Kernel space and User space talk to each other through the KTM
+
+Decompilers
+    JustDecompile (Telerik)
