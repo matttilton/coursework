@@ -11,3 +11,8 @@ intermediate representation => [code generator] => target machine code)
 
 Symbol table - tracks symbols (variable, constants, functions) tracks scope
 Error handler - handles error
+
+---------------------------------------------
+Missed a day so notes are probably incomplete
+---------------------------------------------
+
