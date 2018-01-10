@@ -122,19 +122,21 @@ function getch() {
         ch = line[whichChar]
         whichChar += 1;
     }
+    console.log(ch);
+    return ch;
 }
 
 function getsym() {
-    while (ch == ' ' || ch == '\n' || ch == '\r' || ch == '\t') {
+    while (ch == ' ' || ch == '\n' || ch == '\r') {
         getch()
     }
     a = [];
-    if (ch.match(/^[A-Z]$/i)) {
+    if (ch.match(/^[a-zA-Z]+$/i)) {
         var k = 0;
         while (true) {
             a.push(ch);
             getch();
-            if (!ch.match(/^[A-Z]|[[0-9]$/i)) {
+            if (!ch.match(/^[a-zA-Z0-9]+$/i)) {
                 break
             }
         }
@@ -151,7 +153,7 @@ function getsym() {
         if (flag == 0) { // if sym is not a reserved word
             sym = 'ident'
         }
-    } else if (ch.match(/^[0-9]$/i)) {
+    } else if (ch.match(/^[0-9]+$/i)) {
         var k = 0;
         num = 0;
         sym = 'number';
@@ -159,7 +161,7 @@ function getsym() {
             a.push(ch);
             k += 1;
             getch();
-            if (!ch.match(/^[0-9]$/i)) {
+            if (!ch.match(/^[0-9]+$/i)) {
                 break;
             }
         }
@@ -252,7 +254,7 @@ function vardeclaration(tx) {
 }
 
 function block(tableIndex) {
-    tx = [];
+    tx = [1];
     tx[0] = tableIndex;
     if (sym == 'CONST') {
         while (true) {
@@ -273,10 +275,14 @@ function block(tableIndex) {
             getsym();
             vardeclaration(tx);
             if (sym != "comma") {
-                error(10);
+                break;
             }
-            getsym();
         }
+
+        if (sym != 'semicolon') {
+            error(10);
+        }
+        getsym();
     }
 
     while (sym == 'PROCEDURE') {
@@ -391,9 +397,10 @@ function factor(tx) {
     } else if (sym == 'lparen') {
         getsym();
         expression(tx);
-    }
-    if (sym != "rparen") {
-        error(22)
+    
+        if (sym != "rparen") {
+            error(22)
+        }
         getsym()
     } else {
         error(24)

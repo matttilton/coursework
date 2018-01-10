@@ -89,7 +89,7 @@ def getch():
         ch = line[whichChar]
         whichChar += 1
     return ch
-        
+
 def getsym():
     global charcnt, ch, al, a, norw, rword, sym, nmax, id, debugflag
     if debugflag:
@@ -222,9 +222,7 @@ def block(tableIndex):
     
     if sym == "VAR":
         while True:
-            debugflag = True
             getsym()
-            debugflag = False
             vardeclaration(tx)
             if sym != "comma":
                 break
