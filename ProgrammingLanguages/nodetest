@@ -1,0 +1,3227 @@
+setting up
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 0 linelen 0 currentline 0
+CONST
+getch: C
+getsym: found character: C
+getsym: character 'C' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 1 linelen 5 currentline 1
+getch: O
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 2 linelen 5 currentline 1
+getch: N
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 3 linelen 5 currentline 1
+getch: S
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 4 linelen 5 currentline 1
+getch: T
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 5 linelen 5 currentline 1
+    A = 5, B = 10;
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'CONST'
+getsym: checking if reserved word
+getsym: is reserver word 'CONST'
+block: tableindex = 0
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 18 currentline 2
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 18 currentline 2
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 18 currentline 2
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 18 currentline 2
+getch: A
+getsym: found character: A
+getsym: character 'A' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 5 linelen 18 currentline 2
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'A'
+getsym: checking if reserved word
+getsym: sym is ident
+constdeclaration: tx = 0
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 18 currentline 2
+getch: =
+getsym: found character: =
+getsym: sym = eql
+getsym: getch 11
+getch: getting ch whichchar 7 linelen 18 currentline 2
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 18 currentline 2
+getch: 5
+getsym: found character: 5
+getsym: is 0-9
+getsym: sym = number
+getsym: building a string: 5
+getsym: getch 3
+getch: getting ch whichchar 9 linelen 18 currentline 2
+getch: ,
+getsym: not a number breaking loop
+getsym: number 5
+enter: tableindex = 0 k = const
+TABLEVALUE: Creating new tablevalue with name = A kind = const
+enter: tablevalue = [object Object]
+getsym: getting sym
+getsym: found character: ,
+getsym: sym = comma
+getsym: getch 11
+getch: getting ch whichchar 10 linelen 18 currentline 2
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 11 linelen 18 currentline 2
+getch: B
+getsym: found character: B
+getsym: character 'B' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 12 linelen 18 currentline 2
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'B'
+getsym: checking if reserved word
+getsym: sym is ident
+constdeclaration: tx = 1
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 13 linelen 18 currentline 2
+getch: =
+getsym: found character: =
+getsym: sym = eql
+getsym: getch 11
+getch: getting ch whichchar 14 linelen 18 currentline 2
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 15 linelen 18 currentline 2
+getch: 1
+getsym: found character: 1
+getsym: is 0-9
+getsym: sym = number
+getsym: building a string: 1
+getsym: getch 3
+getch: getting ch whichchar 16 linelen 18 currentline 2
+getch: 0
+getsym: building a string: 1,0
+getsym: getch 3
+getch: getting ch whichchar 17 linelen 18 currentline 2
+getch: ;
+getsym: not a number breaking loop
+getsym: number 10
+enter: tableindex = 1 k = const
+TABLEVALUE: Creating new tablevalue with name = B kind = const
+enter: tablevalue = [object Object]
+getsym: getting sym
+getsym: found character: ;
+getsym: sym = semicolon
+getsym: getch 11
+getch: getting ch whichchar 18 linelen 18 currentline 2
+VAR
+getch: V
+getsym: getting sym
+getsym: found character: V
+getsym: character 'V' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 1 linelen 3 currentline 3
+getch: A
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 2 linelen 3 currentline 3
+getch: R
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 3 linelen 3 currentline 3
+    C, D, E;
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'VAR'
+getsym: checking if reserved word
+getsym: is reserver word 'VAR'
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 12 currentline 4
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 12 currentline 4
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 12 currentline 4
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 12 currentline 4
+getch: C
+getsym: found character: C
+getsym: character 'C' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 5 linelen 12 currentline 4
+getch: ,
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'C'
+getsym: checking if reserved word
+getsym: sym is ident
+vardeclaration: tx = 2
+enter: tableindex = 2 k = variable
+TABLEVALUE: Creating new tablevalue with name = C kind = variable
+enter: tablevalue = [object Object]
+getsym: getting sym
+getsym: found character: ,
+getsym: sym = comma
+getsym: getch 11
+getch: getting ch whichchar 6 linelen 12 currentline 4
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 12 currentline 4
+getch: D
+getsym: found character: D
+getsym: character 'D' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 8 linelen 12 currentline 4
+getch: ,
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'D'
+getsym: checking if reserved word
+getsym: sym is ident
+vardeclaration: tx = 3
+enter: tableindex = 3 k = variable
+TABLEVALUE: Creating new tablevalue with name = D kind = variable
+enter: tablevalue = [object Object]
+getsym: getting sym
+getsym: found character: ,
+getsym: sym = comma
+getsym: getch 11
+getch: getting ch whichchar 9 linelen 12 currentline 4
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 10 linelen 12 currentline 4
+getch: E
+getsym: found character: E
+getsym: character 'E' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 11 linelen 12 currentline 4
+getch: ;
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'E'
+getsym: checking if reserved word
+getsym: sym is ident
+vardeclaration: tx = 4
+enter: tableindex = 4 k = variable
+TABLEVALUE: Creating new tablevalue with name = E kind = variable
+enter: tablevalue = [object Object]
+getsym: getting sym
+getsym: found character: ;
+getsym: sym = semicolon
+getsym: getch 11
+getch: getting ch whichchar 12 linelen 12 currentline 4
+
+PROCEDURE ONE;
+getch: P
+getsym: getting sym
+getsym: found character: P
+getsym: character 'P' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 1 linelen 14 currentline 6
+getch: R
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 2 linelen 14 currentline 6
+getch: O
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 3 linelen 14 currentline 6
+getch: C
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 4 linelen 14 currentline 6
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 5 linelen 14 currentline 6
+getch: D
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 6 linelen 14 currentline 6
+getch: U
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 7 linelen 14 currentline 6
+getch: R
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 8 linelen 14 currentline 6
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 9 linelen 14 currentline 6
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'PROCEDURE'
+getsym: checking if reserved word
+getsym: is reserver word 'PROCEDURE'
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 10 linelen 14 currentline 6
+getch: O
+getsym: found character: O
+getsym: character 'O' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 11 linelen 14 currentline 6
+getch: N
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 12 linelen 14 currentline 6
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 13 linelen 14 currentline 6
+getch: ;
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'ONE'
+getsym: checking if reserved word
+getsym: sym is ident
+enter: tableindex = 5 k = procedure
+TABLEVALUE: Creating new tablevalue with name = ONE kind = procedure
+enter: tablevalue = [object Object]
+getsym: getting sym
+getsym: found character: ;
+getsym: sym = semicolon
+getsym: getch 11
+getch: getting ch whichchar 14 linelen 14 currentline 6
+    VAR B, C;
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 13 currentline 7
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 13 currentline 7
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 13 currentline 7
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 13 currentline 7
+getch: V
+getsym: found character: V
+getsym: character 'V' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 5 linelen 13 currentline 7
+getch: A
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 6 linelen 13 currentline 7
+getch: R
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 7 linelen 13 currentline 7
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'VAR'
+getsym: checking if reserved word
+getsym: is reserver word 'VAR'
+block: tableindex = 6
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 13 currentline 7
+getch: B
+getsym: found character: B
+getsym: character 'B' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 9 linelen 13 currentline 7
+getch: ,
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'B'
+getsym: checking if reserved word
+getsym: sym is ident
+vardeclaration: tx = 6
+enter: tableindex = 6 k = variable
+TABLEVALUE: Creating new tablevalue with name = B kind = variable
+enter: tablevalue = [object Object]
+getsym: getting sym
+getsym: found character: ,
+getsym: sym = comma
+getsym: getch 11
+getch: getting ch whichchar 10 linelen 13 currentline 7
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 11 linelen 13 currentline 7
+getch: C
+getsym: found character: C
+getsym: character 'C' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 12 linelen 13 currentline 7
+getch: ;
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'C'
+getsym: checking if reserved word
+getsym: sym is ident
+vardeclaration: tx = 7
+enter: tableindex = 7 k = variable
+TABLEVALUE: Creating new tablevalue with name = C kind = variable
+enter: tablevalue = [object Object]
+getsym: getting sym
+getsym: found character: ;
+getsym: sym = semicolon
+getsym: getch 11
+getch: getting ch whichchar 13 linelen 13 currentline 7
+
+    PROCEDURE TWO;
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 18 currentline 9
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 18 currentline 9
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 18 currentline 9
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 18 currentline 9
+getch: P
+getsym: found character: P
+getsym: character 'P' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 5 linelen 18 currentline 9
+getch: R
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 6 linelen 18 currentline 9
+getch: O
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 7 linelen 18 currentline 9
+getch: C
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 8 linelen 18 currentline 9
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 9 linelen 18 currentline 9
+getch: D
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 10 linelen 18 currentline 9
+getch: U
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 11 linelen 18 currentline 9
+getch: R
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 12 linelen 18 currentline 9
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 13 linelen 18 currentline 9
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'PROCEDURE'
+getsym: checking if reserved word
+getsym: is reserver word 'PROCEDURE'
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 14 linelen 18 currentline 9
+getch: T
+getsym: found character: T
+getsym: character 'T' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 15 linelen 18 currentline 9
+getch: W
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 16 linelen 18 currentline 9
+getch: O
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 17 linelen 18 currentline 9
+getch: ;
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'TWO'
+getsym: checking if reserved word
+getsym: sym is ident
+enter: tableindex = 8 k = procedure
+TABLEVALUE: Creating new tablevalue with name = TWO kind = procedure
+enter: tablevalue = [object Object]
+getsym: getting sym
+getsym: found character: ;
+getsym: sym = semicolon
+getsym: getch 11
+getch: getting ch whichchar 18 linelen 18 currentline 9
+        VAR C, D;
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 17 currentline 10
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 17 currentline 10
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 17 currentline 10
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 17 currentline 10
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 5 linelen 17 currentline 10
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 17 currentline 10
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 17 currentline 10
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 17 currentline 10
+getch: V
+getsym: found character: V
+getsym: character 'V' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 9 linelen 17 currentline 10
+getch: A
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 10 linelen 17 currentline 10
+getch: R
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 11 linelen 17 currentline 10
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'VAR'
+getsym: checking if reserved word
+getsym: is reserver word 'VAR'
+block: tableindex = 9
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 12 linelen 17 currentline 10
+getch: C
+getsym: found character: C
+getsym: character 'C' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 13 linelen 17 currentline 10
+getch: ,
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'C'
+getsym: checking if reserved word
+getsym: sym is ident
+vardeclaration: tx = 9
+enter: tableindex = 9 k = variable
+TABLEVALUE: Creating new tablevalue with name = C kind = variable
+enter: tablevalue = [object Object]
+getsym: getting sym
+getsym: found character: ,
+getsym: sym = comma
+getsym: getch 11
+getch: getting ch whichchar 14 linelen 17 currentline 10
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 15 linelen 17 currentline 10
+getch: D
+getsym: found character: D
+getsym: character 'D' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 16 linelen 17 currentline 10
+getch: ;
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'D'
+getsym: checking if reserved word
+getsym: sym is ident
+vardeclaration: tx = 10
+enter: tableindex = 10 k = variable
+TABLEVALUE: Creating new tablevalue with name = D kind = variable
+enter: tablevalue = [object Object]
+getsym: getting sym
+getsym: found character: ;
+getsym: sym = semicolon
+getsym: getch 11
+getch: getting ch whichchar 17 linelen 17 currentline 10
+        BEGIN
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 13 currentline 11
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 13 currentline 11
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 13 currentline 11
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 13 currentline 11
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 5 linelen 13 currentline 11
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 13 currentline 11
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 13 currentline 11
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 13 currentline 11
+getch: B
+getsym: found character: B
+getsym: character 'B' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 9 linelen 13 currentline 11
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 10 linelen 13 currentline 11
+getch: G
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 11 linelen 13 currentline 11
+getch: I
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 12 linelen 13 currentline 11
+getch: N
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 13 linelen 13 currentline 11
+            IF C = D THEN
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'BEGIN'
+getsym: checking if reserved word
+getsym: is reserver word 'BEGIN'
+statement: tx = 11
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 25 currentline 12
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 25 currentline 12
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 25 currentline 12
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 25 currentline 12
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 5 linelen 25 currentline 12
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 25 currentline 12
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 25 currentline 12
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 25 currentline 12
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 9 linelen 25 currentline 12
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 10 linelen 25 currentline 12
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 11 linelen 25 currentline 12
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 12 linelen 25 currentline 12
+getch: I
+getsym: found character: I
+getsym: character 'I' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 13 linelen 25 currentline 12
+getch: F
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 14 linelen 25 currentline 12
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'IF'
+getsym: checking if reserved word
+getsym: is reserver word 'IF'
+statement: tx = 11
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 15 linelen 25 currentline 12
+getch: C
+getsym: found character: C
+getsym: character 'C' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 16 linelen 25 currentline 12
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'C'
+getsym: checking if reserved word
+getsym: sym is ident
+condition: tx = 11
+expression: tx = 11
+term: tx = 11
+factor: tx = 11
+position: tableindex = 11 k = C
+TABLEVALUE: Creating new tablevalue with name = C kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 17 linelen 25 currentline 12
+getch: =
+getsym: found character: =
+getsym: sym = eql
+getsym: getch 11
+getch: getting ch whichchar 18 linelen 25 currentline 12
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 19 linelen 25 currentline 12
+getch: D
+getsym: found character: D
+getsym: character 'D' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 20 linelen 25 currentline 12
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'D'
+getsym: checking if reserved word
+getsym: sym is ident
+expression: tx = 11
+term: tx = 11
+factor: tx = 11
+position: tableindex = 11 k = D
+TABLEVALUE: Creating new tablevalue with name = D kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 21 linelen 25 currentline 12
+getch: T
+getsym: found character: T
+getsym: character 'T' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 22 linelen 25 currentline 12
+getch: H
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 23 linelen 25 currentline 12
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 24 linelen 25 currentline 12
+getch: N
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 25 linelen 25 currentline 12
+                CALL TWO;
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'THEN'
+getsym: checking if reserved word
+getsym: is reserver word 'THEN'
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 25 currentline 13
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 25 currentline 13
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 25 currentline 13
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 25 currentline 13
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 5 linelen 25 currentline 13
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 25 currentline 13
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 25 currentline 13
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 25 currentline 13
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 9 linelen 25 currentline 13
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 10 linelen 25 currentline 13
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 11 linelen 25 currentline 13
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 12 linelen 25 currentline 13
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 13 linelen 25 currentline 13
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 14 linelen 25 currentline 13
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 15 linelen 25 currentline 13
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 16 linelen 25 currentline 13
+getch: C
+getsym: found character: C
+getsym: character 'C' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 17 linelen 25 currentline 13
+getch: A
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 18 linelen 25 currentline 13
+getch: L
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 19 linelen 25 currentline 13
+getch: L
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 20 linelen 25 currentline 13
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'CALL'
+getsym: checking if reserved word
+getsym: is reserver word 'CALL'
+statement: tx = 11
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 21 linelen 25 currentline 13
+getch: T
+getsym: found character: T
+getsym: character 'T' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 22 linelen 25 currentline 13
+getch: W
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 23 linelen 25 currentline 13
+getch: O
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 24 linelen 25 currentline 13
+getch: ;
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'TWO'
+getsym: checking if reserved word
+getsym: sym is ident
+position: tableindex = 11 k = TWO
+TABLEVALUE: Creating new tablevalue with name = TWO kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: found character: ;
+getsym: sym = semicolon
+getsym: getch 11
+getch: getting ch whichchar 25 linelen 25 currentline 13
+            IF A <> D THEN
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 26 currentline 14
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 26 currentline 14
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 26 currentline 14
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 26 currentline 14
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 5 linelen 26 currentline 14
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 26 currentline 14
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 26 currentline 14
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 26 currentline 14
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 9 linelen 26 currentline 14
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 10 linelen 26 currentline 14
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 11 linelen 26 currentline 14
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 12 linelen 26 currentline 14
+getch: I
+getsym: found character: I
+getsym: character 'I' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 13 linelen 26 currentline 14
+getch: F
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 14 linelen 26 currentline 14
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'IF'
+getsym: checking if reserved word
+getsym: is reserver word 'IF'
+statement: tx = 11
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 15 linelen 26 currentline 14
+getch: A
+getsym: found character: A
+getsym: character 'A' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 16 linelen 26 currentline 14
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'A'
+getsym: checking if reserved word
+getsym: sym is ident
+condition: tx = 11
+expression: tx = 11
+term: tx = 11
+factor: tx = 11
+position: tableindex = 11 k = A
+TABLEVALUE: Creating new tablevalue with name = A kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 17 linelen 26 currentline 14
+getch: <
+getsym: found character: <
+getsym: running <
+getsym: getch 8
+getch: getting ch whichchar 18 linelen 26 currentline 14
+getch: >
+getsym: getch 10
+getch: getting ch whichchar 19 linelen 26 currentline 14
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 20 linelen 26 currentline 14
+getch: D
+getsym: found character: D
+getsym: character 'D' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 21 linelen 26 currentline 14
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'D'
+getsym: checking if reserved word
+getsym: sym is ident
+expression: tx = 11
+term: tx = 11
+factor: tx = 11
+position: tableindex = 11 k = D
+TABLEVALUE: Creating new tablevalue with name = D kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 22 linelen 26 currentline 14
+getch: T
+getsym: found character: T
+getsym: character 'T' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 23 linelen 26 currentline 14
+getch: H
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 24 linelen 26 currentline 14
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 25 linelen 26 currentline 14
+getch: N
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 26 linelen 26 currentline 14
+                CALL ONE;
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'THEN'
+getsym: checking if reserved word
+getsym: is reserver word 'THEN'
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 25 currentline 15
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 25 currentline 15
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 25 currentline 15
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 25 currentline 15
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 5 linelen 25 currentline 15
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 25 currentline 15
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 25 currentline 15
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 25 currentline 15
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 9 linelen 25 currentline 15
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 10 linelen 25 currentline 15
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 11 linelen 25 currentline 15
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 12 linelen 25 currentline 15
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 13 linelen 25 currentline 15
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 14 linelen 25 currentline 15
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 15 linelen 25 currentline 15
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 16 linelen 25 currentline 15
+getch: C
+getsym: found character: C
+getsym: character 'C' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 17 linelen 25 currentline 15
+getch: A
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 18 linelen 25 currentline 15
+getch: L
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 19 linelen 25 currentline 15
+getch: L
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 20 linelen 25 currentline 15
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'CALL'
+getsym: checking if reserved word
+getsym: is reserver word 'CALL'
+statement: tx = 11
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 21 linelen 25 currentline 15
+getch: O
+getsym: found character: O
+getsym: character 'O' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 22 linelen 25 currentline 15
+getch: N
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 23 linelen 25 currentline 15
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 24 linelen 25 currentline 15
+getch: ;
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'ONE'
+getsym: checking if reserved word
+getsym: sym is ident
+position: tableindex = 11 k = ONE
+TABLEVALUE: Creating new tablevalue with name = ONE kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: found character: ;
+getsym: sym = semicolon
+getsym: getch 11
+getch: getting ch whichchar 25 linelen 25 currentline 15
+        END;
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 12 currentline 16
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 12 currentline 16
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 12 currentline 16
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 12 currentline 16
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 5 linelen 12 currentline 16
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 12 currentline 16
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 12 currentline 16
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 12 currentline 16
+getch: E
+getsym: found character: E
+getsym: character 'E' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 9 linelen 12 currentline 16
+getch: N
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 10 linelen 12 currentline 16
+getch: D
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 11 linelen 12 currentline 16
+getch: ;
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'END'
+getsym: checking if reserved word
+getsym: is reserver word 'END'
+statement: tx = 11
+getsym: getting sym
+getsym: found character: ;
+getsym: sym = semicolon
+getsym: getch 11
+getch: getting ch whichchar 12 linelen 12 currentline 16
+
+    PROCEDURE THREE;
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 20 currentline 18
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 20 currentline 18
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 20 currentline 18
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 20 currentline 18
+getch: P
+getsym: found character: P
+getsym: character 'P' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 5 linelen 20 currentline 18
+getch: R
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 6 linelen 20 currentline 18
+getch: O
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 7 linelen 20 currentline 18
+getch: C
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 8 linelen 20 currentline 18
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 9 linelen 20 currentline 18
+getch: D
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 10 linelen 20 currentline 18
+getch: U
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 11 linelen 20 currentline 18
+getch: R
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 12 linelen 20 currentline 18
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 13 linelen 20 currentline 18
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'PROCEDURE'
+getsym: checking if reserved word
+getsym: is reserver word 'PROCEDURE'
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 14 linelen 20 currentline 18
+getch: T
+getsym: found character: T
+getsym: character 'T' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 15 linelen 20 currentline 18
+getch: H
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 16 linelen 20 currentline 18
+getch: R
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 17 linelen 20 currentline 18
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 18 linelen 20 currentline 18
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 19 linelen 20 currentline 18
+getch: ;
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'THREE'
+getsym: checking if reserved word
+getsym: sym is ident
+enter: tableindex = 11 k = procedure
+TABLEVALUE: Creating new tablevalue with name = THREE kind = procedure
+enter: tablevalue = [object Object]
+getsym: getting sym
+getsym: found character: ;
+getsym: sym = semicolon
+getsym: getch 11
+getch: getting ch whichchar 20 linelen 20 currentline 18
+        VAR X, Y, Z, A, B, C;
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 29 currentline 19
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 29 currentline 19
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 29 currentline 19
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 29 currentline 19
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 5 linelen 29 currentline 19
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 29 currentline 19
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 29 currentline 19
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 29 currentline 19
+getch: V
+getsym: found character: V
+getsym: character 'V' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 9 linelen 29 currentline 19
+getch: A
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 10 linelen 29 currentline 19
+getch: R
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 11 linelen 29 currentline 19
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'VAR'
+getsym: checking if reserved word
+getsym: is reserver word 'VAR'
+block: tableindex = 12
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 12 linelen 29 currentline 19
+getch: X
+getsym: found character: X
+getsym: character 'X' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 13 linelen 29 currentline 19
+getch: ,
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'X'
+getsym: checking if reserved word
+getsym: sym is ident
+vardeclaration: tx = 12
+enter: tableindex = 12 k = variable
+TABLEVALUE: Creating new tablevalue with name = X kind = variable
+enter: tablevalue = [object Object]
+getsym: getting sym
+getsym: found character: ,
+getsym: sym = comma
+getsym: getch 11
+getch: getting ch whichchar 14 linelen 29 currentline 19
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 15 linelen 29 currentline 19
+getch: Y
+getsym: found character: Y
+getsym: character 'Y' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 16 linelen 29 currentline 19
+getch: ,
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'Y'
+getsym: checking if reserved word
+getsym: sym is ident
+vardeclaration: tx = 13
+enter: tableindex = 13 k = variable
+TABLEVALUE: Creating new tablevalue with name = Y kind = variable
+enter: tablevalue = [object Object]
+getsym: getting sym
+getsym: found character: ,
+getsym: sym = comma
+getsym: getch 11
+getch: getting ch whichchar 17 linelen 29 currentline 19
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 18 linelen 29 currentline 19
+getch: Z
+getsym: found character: Z
+getsym: character 'Z' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 19 linelen 29 currentline 19
+getch: ,
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'Z'
+getsym: checking if reserved word
+getsym: sym is ident
+vardeclaration: tx = 14
+enter: tableindex = 14 k = variable
+TABLEVALUE: Creating new tablevalue with name = Z kind = variable
+enter: tablevalue = [object Object]
+getsym: getting sym
+getsym: found character: ,
+getsym: sym = comma
+getsym: getch 11
+getch: getting ch whichchar 20 linelen 29 currentline 19
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 21 linelen 29 currentline 19
+getch: A
+getsym: found character: A
+getsym: character 'A' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 22 linelen 29 currentline 19
+getch: ,
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'A'
+getsym: checking if reserved word
+getsym: sym is ident
+vardeclaration: tx = 15
+enter: tableindex = 15 k = variable
+TABLEVALUE: Creating new tablevalue with name = A kind = variable
+enter: tablevalue = [object Object]
+getsym: getting sym
+getsym: found character: ,
+getsym: sym = comma
+getsym: getch 11
+getch: getting ch whichchar 23 linelen 29 currentline 19
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 24 linelen 29 currentline 19
+getch: B
+getsym: found character: B
+getsym: character 'B' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 25 linelen 29 currentline 19
+getch: ,
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'B'
+getsym: checking if reserved word
+getsym: sym is ident
+vardeclaration: tx = 16
+enter: tableindex = 16 k = variable
+TABLEVALUE: Creating new tablevalue with name = B kind = variable
+enter: tablevalue = [object Object]
+getsym: getting sym
+getsym: found character: ,
+getsym: sym = comma
+getsym: getch 11
+getch: getting ch whichchar 26 linelen 29 currentline 19
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 27 linelen 29 currentline 19
+getch: C
+getsym: found character: C
+getsym: character 'C' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 28 linelen 29 currentline 19
+getch: ;
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'C'
+getsym: checking if reserved word
+getsym: sym is ident
+vardeclaration: tx = 17
+enter: tableindex = 17 k = variable
+TABLEVALUE: Creating new tablevalue with name = C kind = variable
+enter: tablevalue = [object Object]
+getsym: getting sym
+getsym: found character: ;
+getsym: sym = semicolon
+getsym: getch 11
+getch: getting ch whichchar 29 linelen 29 currentline 19
+        BEGIN
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 13 currentline 20
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 13 currentline 20
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 13 currentline 20
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 13 currentline 20
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 5 linelen 13 currentline 20
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 13 currentline 20
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 13 currentline 20
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 13 currentline 20
+getch: B
+getsym: found character: B
+getsym: character 'B' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 9 linelen 13 currentline 20
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 10 linelen 13 currentline 20
+getch: G
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 11 linelen 13 currentline 20
+getch: I
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 12 linelen 13 currentline 20
+getch: N
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 13 linelen 13 currentline 20
+            IF C < X THEN
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'BEGIN'
+getsym: checking if reserved word
+getsym: is reserver word 'BEGIN'
+statement: tx = 18
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 25 currentline 21
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 25 currentline 21
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 25 currentline 21
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 25 currentline 21
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 5 linelen 25 currentline 21
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 25 currentline 21
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 25 currentline 21
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 25 currentline 21
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 9 linelen 25 currentline 21
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 10 linelen 25 currentline 21
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 11 linelen 25 currentline 21
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 12 linelen 25 currentline 21
+getch: I
+getsym: found character: I
+getsym: character 'I' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 13 linelen 25 currentline 21
+getch: F
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 14 linelen 25 currentline 21
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'IF'
+getsym: checking if reserved word
+getsym: is reserver word 'IF'
+statement: tx = 18
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 15 linelen 25 currentline 21
+getch: C
+getsym: found character: C
+getsym: character 'C' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 16 linelen 25 currentline 21
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'C'
+getsym: checking if reserved word
+getsym: sym is ident
+condition: tx = 18
+expression: tx = 18
+term: tx = 18
+factor: tx = 18
+position: tableindex = 18 k = C
+TABLEVALUE: Creating new tablevalue with name = C kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 17 linelen 25 currentline 21
+getch: <
+getsym: found character: <
+getsym: running <
+getsym: getch 8
+getch: getting ch whichchar 18 linelen 25 currentline 21
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 19 linelen 25 currentline 21
+getch: X
+getsym: found character: X
+getsym: character 'X' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 20 linelen 25 currentline 21
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'X'
+getsym: checking if reserved word
+getsym: sym is ident
+expression: tx = 18
+term: tx = 18
+factor: tx = 18
+position: tableindex = 18 k = X
+TABLEVALUE: Creating new tablevalue with name = X kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 21 linelen 25 currentline 21
+getch: T
+getsym: found character: T
+getsym: character 'T' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 22 linelen 25 currentline 21
+getch: H
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 23 linelen 25 currentline 21
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 24 linelen 25 currentline 21
+getch: N
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 25 linelen 25 currentline 21
+            BEGIN
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'THEN'
+getsym: checking if reserved word
+getsym: is reserver word 'THEN'
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 17 currentline 22
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 17 currentline 22
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 17 currentline 22
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 17 currentline 22
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 5 linelen 17 currentline 22
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 17 currentline 22
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 17 currentline 22
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 17 currentline 22
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 9 linelen 17 currentline 22
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 10 linelen 17 currentline 22
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 11 linelen 17 currentline 22
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 12 linelen 17 currentline 22
+getch: B
+getsym: found character: B
+getsym: character 'B' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 13 linelen 17 currentline 22
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 14 linelen 17 currentline 22
+getch: G
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 15 linelen 17 currentline 22
+getch: I
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 16 linelen 17 currentline 22
+getch: N
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 17 linelen 17 currentline 22
+                CALL THREE;
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'BEGIN'
+getsym: checking if reserved word
+getsym: is reserver word 'BEGIN'
+statement: tx = 18
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 27 currentline 23
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 27 currentline 23
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 27 currentline 23
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 27 currentline 23
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 5 linelen 27 currentline 23
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 27 currentline 23
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 27 currentline 23
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 27 currentline 23
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 9 linelen 27 currentline 23
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 10 linelen 27 currentline 23
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 11 linelen 27 currentline 23
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 12 linelen 27 currentline 23
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 13 linelen 27 currentline 23
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 14 linelen 27 currentline 23
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 15 linelen 27 currentline 23
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 16 linelen 27 currentline 23
+getch: C
+getsym: found character: C
+getsym: character 'C' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 17 linelen 27 currentline 23
+getch: A
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 18 linelen 27 currentline 23
+getch: L
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 19 linelen 27 currentline 23
+getch: L
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 20 linelen 27 currentline 23
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'CALL'
+getsym: checking if reserved word
+getsym: is reserver word 'CALL'
+statement: tx = 18
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 21 linelen 27 currentline 23
+getch: T
+getsym: found character: T
+getsym: character 'T' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 22 linelen 27 currentline 23
+getch: H
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 23 linelen 27 currentline 23
+getch: R
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 24 linelen 27 currentline 23
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 25 linelen 27 currentline 23
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 26 linelen 27 currentline 23
+getch: ;
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'THREE'
+getsym: checking if reserved word
+getsym: sym is ident
+position: tableindex = 18 k = THREE
+TABLEVALUE: Creating new tablevalue with name = THREE kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: found character: ;
+getsym: sym = semicolon
+getsym: getch 11
+getch: getting ch whichchar 27 linelen 27 currentline 23
+                CALL ONE;
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 25 currentline 24
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 25 currentline 24
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 25 currentline 24
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 25 currentline 24
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 5 linelen 25 currentline 24
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 25 currentline 24
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 25 currentline 24
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 25 currentline 24
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 9 linelen 25 currentline 24
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 10 linelen 25 currentline 24
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 11 linelen 25 currentline 24
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 12 linelen 25 currentline 24
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 13 linelen 25 currentline 24
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 14 linelen 25 currentline 24
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 15 linelen 25 currentline 24
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 16 linelen 25 currentline 24
+getch: C
+getsym: found character: C
+getsym: character 'C' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 17 linelen 25 currentline 24
+getch: A
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 18 linelen 25 currentline 24
+getch: L
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 19 linelen 25 currentline 24
+getch: L
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 20 linelen 25 currentline 24
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'CALL'
+getsym: checking if reserved word
+getsym: is reserver word 'CALL'
+statement: tx = 18
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 21 linelen 25 currentline 24
+getch: O
+getsym: found character: O
+getsym: character 'O' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 22 linelen 25 currentline 24
+getch: N
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 23 linelen 25 currentline 24
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 24 linelen 25 currentline 24
+getch: ;
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'ONE'
+getsym: checking if reserved word
+getsym: sym is ident
+position: tableindex = 18 k = ONE
+TABLEVALUE: Creating new tablevalue with name = ONE kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: found character: ;
+getsym: sym = semicolon
+getsym: getch 11
+getch: getting ch whichchar 25 linelen 25 currentline 24
+            END;
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 16 currentline 25
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 16 currentline 25
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 16 currentline 25
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 16 currentline 25
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 5 linelen 16 currentline 25
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 16 currentline 25
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 16 currentline 25
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 16 currentline 25
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 9 linelen 16 currentline 25
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 10 linelen 16 currentline 25
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 11 linelen 16 currentline 25
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 12 linelen 16 currentline 25
+getch: E
+getsym: found character: E
+getsym: character 'E' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 13 linelen 16 currentline 25
+getch: N
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 14 linelen 16 currentline 25
+getch: D
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 15 linelen 16 currentline 25
+getch: ;
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'END'
+getsym: checking if reserved word
+getsym: is reserver word 'END'
+statement: tx = 18
+getsym: getting sym
+getsym: found character: ;
+getsym: sym = semicolon
+getsym: getch 11
+getch: getting ch whichchar 16 linelen 16 currentline 25
+        END;
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 12 currentline 26
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 12 currentline 26
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 12 currentline 26
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 12 currentline 26
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 5 linelen 12 currentline 26
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 12 currentline 26
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 12 currentline 26
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 12 currentline 26
+getch: E
+getsym: found character: E
+getsym: character 'E' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 9 linelen 12 currentline 26
+getch: N
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 10 linelen 12 currentline 26
+getch: D
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 11 linelen 12 currentline 26
+getch: ;
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'END'
+getsym: checking if reserved word
+getsym: is reserver word 'END'
+statement: tx = 18
+getsym: getting sym
+getsym: found character: ;
+getsym: sym = semicolon
+getsym: getch 11
+getch: getting ch whichchar 12 linelen 12 currentline 26
+
+    BEGIN
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 9 currentline 28
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 9 currentline 28
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 9 currentline 28
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 9 currentline 28
+getch: B
+getsym: found character: B
+getsym: character 'B' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 5 linelen 9 currentline 28
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 6 linelen 9 currentline 28
+getch: G
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 7 linelen 9 currentline 28
+getch: I
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 8 linelen 9 currentline 28
+getch: N
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 9 linelen 9 currentline 28
+        IF B <= -(5 + C * A) THEN
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'BEGIN'
+getsym: checking if reserved word
+getsym: is reserver word 'BEGIN'
+statement: tx = 18
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 33 currentline 29
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 33 currentline 29
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 33 currentline 29
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 33 currentline 29
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 5 linelen 33 currentline 29
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 33 currentline 29
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 33 currentline 29
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 33 currentline 29
+getch: I
+getsym: found character: I
+getsym: character 'I' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 9 linelen 33 currentline 29
+getch: F
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 10 linelen 33 currentline 29
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'IF'
+getsym: checking if reserved word
+getsym: is reserver word 'IF'
+statement: tx = 18
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 11 linelen 33 currentline 29
+getch: B
+getsym: found character: B
+getsym: character 'B' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 12 linelen 33 currentline 29
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'B'
+getsym: checking if reserved word
+getsym: sym is ident
+condition: tx = 18
+expression: tx = 18
+term: tx = 18
+factor: tx = 18
+position: tableindex = 18 k = B
+TABLEVALUE: Creating new tablevalue with name = B kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 13 linelen 33 currentline 29
+getch: <
+getsym: found character: <
+getsym: running <
+getsym: getch 8
+getch: getting ch whichchar 14 linelen 33 currentline 29
+getch: =
+getsym: getch 9
+getch: getting ch whichchar 15 linelen 33 currentline 29
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 16 linelen 33 currentline 29
+getch: -
+getsym: found character: -
+getsym: sym = minus
+getsym: getch 11
+getch: getting ch whichchar 17 linelen 33 currentline 29
+getch: (
+expression: tx = 18
+getsym: getting sym
+getsym: found character: (
+getsym: sym = lparen
+getsym: getch 11
+getch: getting ch whichchar 18 linelen 33 currentline 29
+getch: 5
+term: tx = 18
+factor: tx = 18
+getsym: getting sym
+getsym: found character: 5
+getsym: is 0-9
+getsym: sym = number
+getsym: building a string: 5
+getsym: getch 3
+getch: getting ch whichchar 19 linelen 33 currentline 29
+getch:  
+getsym: not a number breaking loop
+getsym: number 5
+expression: tx = 18
+term: tx = 18
+factor: tx = 18
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 20 linelen 33 currentline 29
+getch: +
+getsym: found character: +
+getsym: sym = plus
+getsym: getch 11
+getch: getting ch whichchar 21 linelen 33 currentline 29
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 22 linelen 33 currentline 29
+getch: C
+getsym: found character: C
+getsym: character 'C' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 23 linelen 33 currentline 29
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'C'
+getsym: checking if reserved word
+getsym: sym is ident
+term: tx = 18
+factor: tx = 18
+position: tableindex = 18 k = C
+TABLEVALUE: Creating new tablevalue with name = C kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 24 linelen 33 currentline 29
+getch: *
+getsym: found character: *
+getsym: sym = times
+getsym: getch 11
+getch: getting ch whichchar 25 linelen 33 currentline 29
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 26 linelen 33 currentline 29
+getch: A
+getsym: found character: A
+getsym: character 'A' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 27 linelen 33 currentline 29
+getch: )
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'A'
+getsym: checking if reserved word
+getsym: sym is ident
+factor: tx = 18
+position: tableindex = 18 k = A
+TABLEVALUE: Creating new tablevalue with name = A kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: found character: )
+getsym: sym = rparen
+getsym: getch 11
+getch: getting ch whichchar 28 linelen 33 currentline 29
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 29 linelen 33 currentline 29
+getch: T
+getsym: found character: T
+getsym: character 'T' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 30 linelen 33 currentline 29
+getch: H
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 31 linelen 33 currentline 29
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 32 linelen 33 currentline 29
+getch: N
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 33 linelen 33 currentline 29
+            B := B + 1;
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'THEN'
+getsym: checking if reserved word
+getsym: is reserver word 'THEN'
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 23 currentline 30
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 23 currentline 30
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 23 currentline 30
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 23 currentline 30
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 5 linelen 23 currentline 30
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 23 currentline 30
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 23 currentline 30
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 23 currentline 30
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 9 linelen 23 currentline 30
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 10 linelen 23 currentline 30
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 11 linelen 23 currentline 30
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 12 linelen 23 currentline 30
+getch: B
+getsym: found character: B
+getsym: character 'B' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 13 linelen 23 currentline 30
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'B'
+getsym: checking if reserved word
+getsym: sym is ident
+statement: tx = 18
+position: tableindex = 18 k = B
+TABLEVALUE: Creating new tablevalue with name = B kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 14 linelen 23 currentline 30
+getch: :
+getsym: found character: :
+getsym: getch 4
+getch: getting ch whichchar 15 linelen 23 currentline 30
+getch: =
+getsym: sym is becomes
+getsym: getch 5
+getch: getting ch whichchar 16 linelen 23 currentline 30
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 17 linelen 23 currentline 30
+getch: B
+getsym: found character: B
+getsym: character 'B' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 18 linelen 23 currentline 30
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'B'
+getsym: checking if reserved word
+getsym: sym is ident
+expression: tx = 18
+term: tx = 18
+factor: tx = 18
+position: tableindex = 18 k = B
+TABLEVALUE: Creating new tablevalue with name = B kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 19 linelen 23 currentline 30
+getch: +
+getsym: found character: +
+getsym: sym = plus
+getsym: getch 11
+getch: getting ch whichchar 20 linelen 23 currentline 30
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 21 linelen 23 currentline 30
+getch: 1
+getsym: found character: 1
+getsym: is 0-9
+getsym: sym = number
+getsym: building a string: 1
+getsym: getch 3
+getch: getting ch whichchar 22 linelen 23 currentline 30
+getch: ;
+getsym: not a number breaking loop
+getsym: number 1
+term: tx = 18
+factor: tx = 18
+getsym: getting sym
+getsym: found character: ;
+getsym: sym = semicolon
+getsym: getch 11
+getch: getting ch whichchar 23 linelen 23 currentline 30
+    END;
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 8 currentline 31
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 8 currentline 31
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 8 currentline 31
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 8 currentline 31
+getch: E
+getsym: found character: E
+getsym: character 'E' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 5 linelen 8 currentline 31
+getch: N
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 6 linelen 8 currentline 31
+getch: D
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 7 linelen 8 currentline 31
+getch: ;
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'END'
+getsym: checking if reserved word
+getsym: is reserver word 'END'
+statement: tx = 18
+getsym: getting sym
+getsym: found character: ;
+getsym: sym = semicolon
+getsym: getch 11
+getch: getting ch whichchar 8 linelen 8 currentline 31
+
+BEGIN
+getch: B
+getsym: getting sym
+getsym: found character: B
+getsym: character 'B' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 1 linelen 5 currentline 33
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 2 linelen 5 currentline 33
+getch: G
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 3 linelen 5 currentline 33
+getch: I
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 4 linelen 5 currentline 33
+getch: N
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 5 linelen 5 currentline 33
+    C := +(C + 1);
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'BEGIN'
+getsym: checking if reserved word
+getsym: is reserver word 'BEGIN'
+statement: tx = 18
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 18 currentline 34
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 18 currentline 34
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 18 currentline 34
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 18 currentline 34
+getch: C
+getsym: found character: C
+getsym: character 'C' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 5 linelen 18 currentline 34
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'C'
+getsym: checking if reserved word
+getsym: sym is ident
+statement: tx = 18
+position: tableindex = 18 k = C
+TABLEVALUE: Creating new tablevalue with name = C kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 18 currentline 34
+getch: :
+getsym: found character: :
+getsym: getch 4
+getch: getting ch whichchar 7 linelen 18 currentline 34
+getch: =
+getsym: sym is becomes
+getsym: getch 5
+getch: getting ch whichchar 8 linelen 18 currentline 34
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 9 linelen 18 currentline 34
+getch: +
+getsym: found character: +
+getsym: sym = plus
+getsym: getch 11
+getch: getting ch whichchar 10 linelen 18 currentline 34
+getch: (
+expression: tx = 18
+getsym: getting sym
+getsym: found character: (
+getsym: sym = lparen
+getsym: getch 11
+getch: getting ch whichchar 11 linelen 18 currentline 34
+getch: C
+term: tx = 18
+factor: tx = 18
+getsym: getting sym
+getsym: found character: C
+getsym: character 'C' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 12 linelen 18 currentline 34
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'C'
+getsym: checking if reserved word
+getsym: sym is ident
+expression: tx = 18
+term: tx = 18
+factor: tx = 18
+position: tableindex = 18 k = C
+TABLEVALUE: Creating new tablevalue with name = C kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 13 linelen 18 currentline 34
+getch: +
+getsym: found character: +
+getsym: sym = plus
+getsym: getch 11
+getch: getting ch whichchar 14 linelen 18 currentline 34
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 15 linelen 18 currentline 34
+getch: 1
+getsym: found character: 1
+getsym: is 0-9
+getsym: sym = number
+getsym: building a string: 1
+getsym: getch 3
+getch: getting ch whichchar 16 linelen 18 currentline 34
+getch: )
+getsym: not a number breaking loop
+getsym: number 1
+term: tx = 18
+factor: tx = 18
+getsym: getting sym
+getsym: found character: )
+getsym: sym = rparen
+getsym: getch 11
+getch: getting ch whichchar 17 linelen 18 currentline 34
+getch: ;
+getsym: getting sym
+getsym: found character: ;
+getsym: sym = semicolon
+getsym: getch 11
+getch: getting ch whichchar 18 linelen 18 currentline 34
+    CALL ONE;
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 13 currentline 35
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 13 currentline 35
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 13 currentline 35
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 13 currentline 35
+getch: C
+getsym: found character: C
+getsym: character 'C' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 5 linelen 13 currentline 35
+getch: A
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 6 linelen 13 currentline 35
+getch: L
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 7 linelen 13 currentline 35
+getch: L
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 8 linelen 13 currentline 35
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'CALL'
+getsym: checking if reserved word
+getsym: is reserver word 'CALL'
+statement: tx = 18
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 9 linelen 13 currentline 35
+getch: O
+getsym: found character: O
+getsym: character 'O' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 10 linelen 13 currentline 35
+getch: N
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 11 linelen 13 currentline 35
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 12 linelen 13 currentline 35
+getch: ;
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'ONE'
+getsym: checking if reserved word
+getsym: sym is ident
+position: tableindex = 18 k = ONE
+TABLEVALUE: Creating new tablevalue with name = ONE kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: found character: ;
+getsym: sym = semicolon
+getsym: getch 11
+getch: getting ch whichchar 13 linelen 13 currentline 35
+    WHILE A > A / A DO
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 22 currentline 36
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 22 currentline 36
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 22 currentline 36
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 22 currentline 36
+getch: W
+getsym: found character: W
+getsym: character 'W' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 5 linelen 22 currentline 36
+getch: H
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 6 linelen 22 currentline 36
+getch: I
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 7 linelen 22 currentline 36
+getch: L
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 8 linelen 22 currentline 36
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 9 linelen 22 currentline 36
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'WHILE'
+getsym: checking if reserved word
+getsym: is reserver word 'WHILE'
+statement: tx = 18
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 10 linelen 22 currentline 36
+getch: A
+getsym: found character: A
+getsym: character 'A' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 11 linelen 22 currentline 36
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'A'
+getsym: checking if reserved word
+getsym: sym is ident
+condition: tx = 18
+expression: tx = 18
+term: tx = 18
+factor: tx = 18
+position: tableindex = 18 k = A
+TABLEVALUE: Creating new tablevalue with name = A kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 12 linelen 22 currentline 36
+getch: >
+getsym: found character: >
+getsym: running >
+getsym: getch 6
+getch: getting ch whichchar 13 linelen 22 currentline 36
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 14 linelen 22 currentline 36
+getch: A
+getsym: found character: A
+getsym: character 'A' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 15 linelen 22 currentline 36
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'A'
+getsym: checking if reserved word
+getsym: sym is ident
+expression: tx = 18
+term: tx = 18
+factor: tx = 18
+position: tableindex = 18 k = A
+TABLEVALUE: Creating new tablevalue with name = A kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 16 linelen 22 currentline 36
+getch: /
+getsym: found character: /
+getsym: sym = slash
+getsym: getch 11
+getch: getting ch whichchar 17 linelen 22 currentline 36
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 18 linelen 22 currentline 36
+getch: A
+getsym: found character: A
+getsym: character 'A' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 19 linelen 22 currentline 36
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'A'
+getsym: checking if reserved word
+getsym: sym is ident
+factor: tx = 18
+position: tableindex = 18 k = A
+TABLEVALUE: Creating new tablevalue with name = A kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 20 linelen 22 currentline 36
+getch: D
+getsym: found character: D
+getsym: character 'D' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 21 linelen 22 currentline 36
+getch: O
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 22 linelen 22 currentline 36
+        WHILE B >= B DO
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'DO'
+getsym: checking if reserved word
+getsym: is reserver word 'DO'
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 23 currentline 37
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 23 currentline 37
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 23 currentline 37
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 23 currentline 37
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 5 linelen 23 currentline 37
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 23 currentline 37
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 23 currentline 37
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 23 currentline 37
+getch: W
+getsym: found character: W
+getsym: character 'W' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 9 linelen 23 currentline 37
+getch: H
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 10 linelen 23 currentline 37
+getch: I
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 11 linelen 23 currentline 37
+getch: L
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 12 linelen 23 currentline 37
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 13 linelen 23 currentline 37
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'WHILE'
+getsym: checking if reserved word
+getsym: is reserver word 'WHILE'
+statement: tx = 18
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 14 linelen 23 currentline 37
+getch: B
+getsym: found character: B
+getsym: character 'B' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 15 linelen 23 currentline 37
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'B'
+getsym: checking if reserved word
+getsym: sym is ident
+condition: tx = 18
+expression: tx = 18
+term: tx = 18
+factor: tx = 18
+position: tableindex = 18 k = B
+TABLEVALUE: Creating new tablevalue with name = B kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 16 linelen 23 currentline 37
+getch: >
+getsym: found character: >
+getsym: running >
+getsym: getch 6
+getch: getting ch whichchar 17 linelen 23 currentline 37
+getch: =
+getsym: getch 7
+getch: getting ch whichchar 18 linelen 23 currentline 37
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 19 linelen 23 currentline 37
+getch: B
+getsym: found character: B
+getsym: character 'B' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 20 linelen 23 currentline 37
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'B'
+getsym: checking if reserved word
+getsym: sym is ident
+expression: tx = 18
+term: tx = 18
+factor: tx = 18
+position: tableindex = 18 k = B
+TABLEVALUE: Creating new tablevalue with name = B kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 21 linelen 23 currentline 37
+getch: D
+getsym: found character: D
+getsym: character 'D' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 22 linelen 23 currentline 37
+getch: O
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 23 linelen 23 currentline 37
+            IF ODD E THEN
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'DO'
+getsym: checking if reserved word
+getsym: is reserver word 'DO'
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 25 currentline 38
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 25 currentline 38
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 25 currentline 38
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 25 currentline 38
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 5 linelen 25 currentline 38
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 25 currentline 38
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 25 currentline 38
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 25 currentline 38
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 9 linelen 25 currentline 38
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 10 linelen 25 currentline 38
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 11 linelen 25 currentline 38
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 12 linelen 25 currentline 38
+getch: I
+getsym: found character: I
+getsym: character 'I' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 13 linelen 25 currentline 38
+getch: F
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 14 linelen 25 currentline 38
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'IF'
+getsym: checking if reserved word
+getsym: is reserver word 'IF'
+statement: tx = 18
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 15 linelen 25 currentline 38
+getch: O
+getsym: found character: O
+getsym: character 'O' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 16 linelen 25 currentline 38
+getch: D
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 17 linelen 25 currentline 38
+getch: D
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 18 linelen 25 currentline 38
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'ODD'
+getsym: checking if reserved word
+getsym: is reserver word 'ODD'
+condition: tx = 18
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 19 linelen 25 currentline 38
+getch: E
+getsym: found character: E
+getsym: character 'E' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 20 linelen 25 currentline 38
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'E'
+getsym: checking if reserved word
+getsym: sym is ident
+expression: tx = 18
+term: tx = 18
+factor: tx = 18
+position: tableindex = 18 k = E
+TABLEVALUE: Creating new tablevalue with name = E kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 21 linelen 25 currentline 38
+getch: T
+getsym: found character: T
+getsym: character 'T' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 22 linelen 25 currentline 38
+getch: H
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 23 linelen 25 currentline 38
+getch: E
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 24 linelen 25 currentline 38
+getch: N
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 25 linelen 25 currentline 38
+                E := E - 1;
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'THEN'
+getsym: checking if reserved word
+getsym: is reserver word 'THEN'
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 1 linelen 27 currentline 39
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 2 linelen 27 currentline 39
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 3 linelen 27 currentline 39
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 4 linelen 27 currentline 39
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 5 linelen 27 currentline 39
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 6 linelen 27 currentline 39
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 7 linelen 27 currentline 39
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 8 linelen 27 currentline 39
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 9 linelen 27 currentline 39
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 10 linelen 27 currentline 39
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 11 linelen 27 currentline 39
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 12 linelen 27 currentline 39
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 13 linelen 27 currentline 39
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 14 linelen 27 currentline 39
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 15 linelen 27 currentline 39
+getch:  
+getsym: getch 1
+getch: getting ch whichchar 16 linelen 27 currentline 39
+getch: E
+getsym: found character: E
+getsym: character 'E' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 17 linelen 27 currentline 39
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'E'
+getsym: checking if reserved word
+getsym: sym is ident
+statement: tx = 18
+position: tableindex = 18 k = E
+TABLEVALUE: Creating new tablevalue with name = E kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 18 linelen 27 currentline 39
+getch: :
+getsym: found character: :
+getsym: getch 4
+getch: getting ch whichchar 19 linelen 27 currentline 39
+getch: =
+getsym: sym is becomes
+getsym: getch 5
+getch: getting ch whichchar 20 linelen 27 currentline 39
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 21 linelen 27 currentline 39
+getch: E
+getsym: found character: E
+getsym: character 'E' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 22 linelen 27 currentline 39
+getch:  
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'E'
+getsym: checking if reserved word
+getsym: sym is ident
+expression: tx = 18
+term: tx = 18
+factor: tx = 18
+position: tableindex = 18 k = E
+TABLEVALUE: Creating new tablevalue with name = E kind = TEST
+position: table[0] = [object Object]
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 23 linelen 27 currentline 39
+getch: -
+getsym: found character: -
+getsym: sym = minus
+getsym: getch 11
+getch: getting ch whichchar 24 linelen 27 currentline 39
+getch:  
+getsym: getting sym
+getsym: getch 1
+getch: getting ch whichchar 25 linelen 27 currentline 39
+getch: 1
+getsym: found character: 1
+getsym: is 0-9
+getsym: sym = number
+getsym: building a string: 1
+getsym: getch 3
+getch: getting ch whichchar 26 linelen 27 currentline 39
+getch: ;
+getsym: not a number breaking loop
+getsym: number 1
+term: tx = 18
+factor: tx = 18
+getsym: getting sym
+getsym: found character: ;
+getsym: sym = semicolon
+getsym: getch 11
+getch: getting ch whichchar 27 linelen 27 currentline 39
+END.
+getch: E
+getsym: getting sym
+getsym: found character: E
+getsym: character 'E' is a letter
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 1 linelen 4 currentline 40
+getch: N
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 2 linelen 4 currentline 40
+getch: D
+getsym: is looping until a non alphanumeric charater is found
+getsym: getch 2
+getch: getting ch whichchar 3 linelen 4 currentline 40
+getch: .
+getsym: loop completed
+getsym: mapping characters to a string
+getsym: found 'END'
+getsym: checking if reserved word
+getsym: is reserver word 'END'
+statement: tx = 18
+getsym: getting sym
+getsym: found character: .
+getsym: sym = period
+getsym: getch 11
+getch: getting ch whichchar 4 linelen 4 currentline 40
+Successful compilation!
