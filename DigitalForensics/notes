@@ -1,0 +1,31 @@
+Procedure and Techniques
+    Always use accepted process
+
+    1. Identification
+    2. Preparation
+    3. Approach strategy
+    4. Preservation
+    5. Collection
+    6. Examination
+    7. Analysis
+    8. Reporting
+    9. Returning of Evidence
+
+Types of data extracted
+    file system data
+    content data
+    metadata
+    filename data
+    application data
+
+types of data Analysis
+    file and application Analysis
+    hidden data Analysis (slack space, host protected area, steganography)
+    time frame Analysis
+
+antiforensics - sabotaging ivestigation
+    - data forgery (change timestamps, change data)
+    - data destruction (physical and logical deletion)
+    - data hiding (encryption, obfuscation)
+    
+
