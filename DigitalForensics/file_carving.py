@@ -1,3 +1,7 @@
+"""
+Matthew Tilton
+9-28-18
+"""
 import md5
 import sys
 import base64
@@ -18,6 +22,7 @@ GIFFOOTER = b"\x00\x3B"
 PNGHEADER = b"\x89\x50\x4E\x47\x0D\x0A\x1A\x0A"
 PNGFOOTER = b"\x49\x45\x4E\x44\xAE\x42\x60\x82"
 DOCXHEADER = b"\x50\x4B\x03\x04\x14\x00\x06\x00"
+# docx doesnt technically have a footer but this is usually 18 bytes before the end of the file
 DOCXFOOTER = b"\x50\x4B\x05\x06"
 
 correcthashesforfiles = ['c3a04e65e43b4a862b010927fae9aab1', '3b2f3b12ee4b04d4d0384adeee21e4d4',

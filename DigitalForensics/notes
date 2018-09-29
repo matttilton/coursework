@@ -25,7 +25,34 @@ types of data Analysis
 
 antiforensics - sabotaging ivestigation
     - data forgery (change timestamps, change data)
+        - changing data to make it look like the crime was not commited
     - data destruction (physical and logical deletion)
+        - degause
     - data hiding (encryption, obfuscation)
-    
+        - hide data in slack space   
+        - falsly mark bad sectors and put data in them
+    - analysis prevention
+        - dont leave a trace behind
+        - syscall proxing
+            - using a kernel on a different computer to make system calls
+        - thread hijaking
+            - using a different process to run your process. often on a different computer.
+        - key scramblers
+            - anti keylogger
+            - encrypts the key presses at the driver level
+        - full disk encryption
+    - online anonymity
+        - ip traceback - analysis Techniques
+            - finding the source of a packet.
+        - proxy
+            - dont use transparent proxy
+                - doesnt hide ip
+            - anonymous proxy is ok
+                - still apears as a proxy server
+            - elite proxy is best
+                - doesnt tell the server that it is a proxy server
+        - vpn similar to proxy
+            - proxies dont encrypt the request between the proxy and you
+            - vpns have full e2e encryption on all packets between you and them
+            
 

@@ -1,0 +1,124 @@
+1st
+acronyms
+
+2nd
+true/false/fill in the blank
+
+3rd
+broad definitions
+
+4th
+give your implementation for a particular scenario
+
+----------------------------------------------
+--------------Research Kismet-----------------
+----------------------------------------------
+
+4 main mobile security concerns
+    device loss/theft
+    application security
+    device data leakage
+    malware
+Evolution of Data networks
+    from telegraphy to packet switching
+    what made circuit switching different from packet switching
+Mobile networks
+    1G
+        AMPS
+        Vulnerabilities
+    2G
+        CDMA/GSM
+        Intro of SMS
+    3G
+        mobile ip broadband
+    4G/LTE
+        All-IP mobile network
+Core Principle of network and data security (CIA Triad)
+    Confidentiality -- make sure that no one can see who is doing what -- ensure using encryption
+    Integrity -- make sure that the data is what you think it is -- ensure using hashing
+    Availability -- make sure that you can access the data when you need it -- 
+    information security uses the same principles +2 extra
+        Accountability -- users responsible for thier actions
+        non-repudiation -- make sure that the log is accurate
+OSI Model
+    All People Seem To Need Data Processing
+        physical
+        datalink
+        network
+        transport
+        session
+        presentation
+        application
+    what are the functions of the individual layers
+    what are the data units of the lower layers
+        physical -- bits/bytes
+        datalink -- frames
+        network -- packets
+IPv4 vs IPv6
+    IPv6 is not fully roled out because you need to replace the hardware
+WiFi protocols
+    supports both 2.4 and 5Ghz networks
+    IEEE 802.11
+        B,g,n,ac
+WEP - wired equivalent privacy/wireless encryption protocol
+    64-bit and 128-bit
+    understand Vulnerabilities/problems/"why its trash"
+    RC4
+    CRC-32 error check
+        40-bit IV
+    Weaknesses?
+WPA
+    a "wrapper" over WEP
+    TKIP - Temporal Key protocol
+    MIC - message integrity check
+        Michael Algorithm
+    How does it patch holes of WPA
+    Authentication
+        PSKs - preshared key
+        RADIUS - authentication service
+        EAP - extensible authentication protocol
+            how does it work
+WPA2
+    AES protocol - advanced encryption standard
+    256-bit
+    key Hierarchy:
+        master key
+        pairwise master key
+        pairwise transient key
+        key confirmation key, key encryption key, temporal key
+    CCMP - Counter mode cypher block chain message authentication protocol
+preference for wi-fi data protection - list of hierarchy of wifi encryption schemes
+data threat category
+    data theft
+        sniffing/snooping
+        malware
+        phishing
+    device control
+        replay attacks
+        bluejacking
+        bluesnarfing
+    system access
+        dos
+        jamming
+        rouge access point
+        evil twin
+WLAN components
+    Radio card, antenna, 802.11 standards
+    topology
+        infrastructure Mode
+        ad-hoc mode
+SSID - Service set identifier
+    active scanning vs passive scanning
+802.11 service sets
+    basic service set
+    extended service set
+    independent basic service set
+    mesh basic service set
+multipath
+WAP
+    4-way handshake for association
+    AP vs ROUTER
+Antenna type
+    omnidirectional
+    semidirectional
+    highly directional
